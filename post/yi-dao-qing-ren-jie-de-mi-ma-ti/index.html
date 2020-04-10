@@ -1,0 +1,234 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>一道情人節的密碼題 | 死体的部落格</title>
+<link rel="shortcut icon" href="https://IsumiAlice.github.io/favicon.ico?v=1586532029001">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://IsumiAlice.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="一道情人節的密碼題 | 死体的部落格 - Atom Feed" href="https://IsumiAlice.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="七夕快樂哦
+今天是七夕呢，寫這個的起因是一個同學的女朋友發了個密碼解密給他。
+
+這就是今天要解決的問題嘍，當然，先把兩種密碼的相關知識貼上。
+凱撒密碼
+在密碼學中，愷撒密碼（英語：Caesar cipher），或稱愷撒加密、愷撒變換、變換加..." />
+    <meta name="keywords" content="演算法" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://IsumiAlice.github.io">
+  <img class="avatar" src="https://IsumiAlice.github.io/images/avatar.png?v=1586532029001" alt="">
+  </a>
+  <h1 class="site-title">
+    死体的部落格
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首頁
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          歸檔
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          標籤
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          關於
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              一道情人節的密碼題
+            </h2>
+            <div class="post-info">
+              <span>
+                2018-08-17
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://IsumiAlice.github.io/tag/hxNB4jaOo/" class="post-tag">
+                  # 演算法
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://raw.githubusercontent.com/IsumiAlice/IsumiPic/master/20200109193021.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h2 id="七夕快樂哦">七夕快樂哦</h2>
+<p>今天是七夕呢，寫這個的起因是一個同學的女朋友發了個密碼解密給他。<br>
+<img src="https://raw.githubusercontent.com/IsumiAlice/IsumiPic/master/20200410231059.png" alt="" loading="lazy"><br>
+這就是今天要解決的問題嘍，當然，先把兩種密碼的相關知識貼上。</p>
+<h2 id="凱撒密碼">凱撒密碼</h2>
+<p>在<a href="https://zh.wikipedia.org/wiki/%E5%AF%86%E7%A0%81%E5%AD%A6" title="密碼學">密碼學</a>中，<strong>愷撒密碼</strong>（英語：Caesar cipher），或稱<strong>愷撒加密</strong>、<strong>愷撒變換</strong>、<strong>變換加密</strong>，是一種最簡單且最廣為人知的加密技術。它是一種<a href="https://zh.wikipedia.org/wiki/%E6%9B%BF%E6%8D%A2%E5%BC%8F%E5%AF%86%E7%A0%81" title="替換式密碼">替換加密</a>的技術，<a href="https://zh.wikipedia.org/wiki/%E6%98%8E%E6%96%87" title="明文">明文</a>中的所有字母都在<a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E6%AF%8D%E8%A1%A8" title="字母表">字母表</a>上向後（或向前）按照一個固定數目進行偏移後被替換成<a href="https://zh.wikipedia.org/wiki/%E5%AF%86%E6%96%87" title="密文">密文</a>。例如，當偏移量是3的時候，所有的字母A將被替換成D，B變成E，以此類推。這個加密方法是以<a href="https://zh.wikipedia.org/wiki/%E7%BE%85%E9%A6%AC%E5%85%B1%E5%92%8C" title="羅馬共和">羅馬共和</a>時期<a href="https://zh.wikipedia.org/wiki/%E6%81%BA%E6%92%92" title="愷撒">愷撒</a>的名字命名的，當年愷撒曾用此方法與其將軍們進行聯繫。</p>
+<p>愷撒密碼通常被作為其他更複雜的加密方法中的一個步驟，例如<a href="https://zh.wikipedia.org/wiki/%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81" title="維吉尼亞密碼">維吉尼亞密碼</a>。愷撒密碼還在現代的<a href="https://zh.wikipedia.org/wiki/ROT13" title="ROT13">ROT13</a>系統中被應用。但是和所有的利用字母表進行替換的加密技術一樣，愷撒密碼非常容易被破解，而且在實際應用中也無法保證通信安全。</p>
+<h2 id="柵欄密碼">柵欄密碼</h2>
+<p>所謂柵欄<a href="https://www.itsfun.com.tw/%E5%AF%86%E7%A2%BC/wiki-8783265-8437835">密碼</a>，就是把要加密的明文分成N個一組，然後把每組的第i個字連起來，形成一段無規律的話。</p>
+<p>一般比較常見的是2欄的棚欄密碼。<br>
+比如明文：THERE IS A CIPHER<br>
+去掉空格後變為：THEREISACIPHER<br>
+兩個一組，得到：TH ER EI SA CI PH ER<br>
+先取出第一個字母：TEESCPE<br>
+再取出第二個字母：HRIAIHR<br>
+連在一起就是：TEESCPEHRIAIHR<br>
+這樣就得到我們需要的密碼了！</p>
+<p>而解密的時候，我們先吧<a href="https://www.itsfun.com.tw/%E5%AF%86%E6%96%87/wiki-4343875-4728655">密文</a>從中間分開，變為兩行：<br>
+T E E S C P E<br>
+H R I A I H R<br>
+再按上下上下的順序組合起來：<br>
+THEREISACIPHER<br>
+分出<a href="https://www.itsfun.com.tw/%E7%A9%BA%E6%A0%BC/wiki-1130465-5262045">空格</a>，就可以得到原文了：<br>
+THERE IS A CIPHER</p>
+<h2 id="python-簡單實現">Python 簡單實現</h2>
+<p>十幾行代碼，非常簡單。<br>
+後面的 for 循環部分應該還能再簡化一點。</p>
+<pre><code class="language-python">import math
+inp = 'cvpgygppjvtgpgfgjgtq'
+num = -2
+step1 = [chr(97 + (ord(x)-97+num)%26) for x in inp]
+print (step1)
+
+num2 = 3
+num3 = math.ceil(len(step1)/num2)
+s2 = [step1[i*num3: (num3*(i+1)) if (num3*(i+1))&lt;len(step1) else len(step1)] for i in range(num2)]
+print(s2)
+s3 = []
+for j in range(num3):
+    for i in range(num2):
+        try:
+            s3.append(s2[i][j])
+        except:
+            pass
+print (s3)
+'''
+and then there were none
+'''
+</code></pre>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%B8%83%E5%A4%95%E5%BF%AB%E6%A8%82%E5%93%A6">七夕快樂哦</a></li>
+<li><a href="#%E5%87%B1%E6%92%92%E5%AF%86%E7%A2%BC">凱撒密碼</a></li>
+<li><a href="#%E6%9F%B5%E6%AC%84%E5%AF%86%E7%A2%BC">柵欄密碼</a></li>
+<li><a href="#python-%E7%B0%A1%E5%96%AE%E5%AF%A6%E7%8F%BE">Python 簡單實現</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://IsumiAlice.github.io/post/bei-ye-wu-de-xiao-jiu-guan-du-shu-bi-ji/">
+              <h3 class="post-title">
+                「北野武的小酒館」讀書筆記
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://IsumiAlice.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
