@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://IsumiAlice.github.io</id>
+    <title>死体的部落格</title>
+    <updated>2020-04-10T12:09:06.527Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://IsumiAlice.github.io"/>
+    <link rel="self" href="https://IsumiAlice.github.io/atom.xml"/>
+    <logo>https://IsumiAlice.github.io/images/avatar.png</logo>
+    <icon>https://IsumiAlice.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, 死体的部落格</rights>
+    <entry>
+        <title type="html"><![CDATA[部落格搬家]]></title>
+        <id>https://IsumiAlice.github.io/post/hello-gridea/</id>
+        <link href="https://IsumiAlice.github.io/post/hello-gridea/">
+        </link>
+        <updated>2020-04-10T12:06:24.000Z</updated>
+    </entry>
+</feed>
