@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://IsumiAlice.github.io</id>
     <title>死体的部落格</title>
-    <updated>2020-04-11T16:13:56.532Z</updated>
+    <updated>2020-04-12T12:15:54.483Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://IsumiAlice.github.io"/>
     <link rel="self" href="https://IsumiAlice.github.io/atom.xml"/>
@@ -45,6 +45,13 @@
         <updated>2019-04-19T14:42:54.000Z</updated>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Python Cheatsheet]]></title>
+        <id>https://IsumiAlice.github.io/post/kaqdpD-RS/</id>
+        <link href="https://IsumiAlice.github.io/post/kaqdpD-RS/">
+        </link>
+        <updated>2019-04-04T12:10:06.000Z</updated>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[柏拉圖多面體]]></title>
         <id>https://IsumiAlice.github.io/post/bo-la-tu-duo-mian-ti/</id>
         <link href="https://IsumiAlice.github.io/post/bo-la-tu-duo-mian-ti/">
@@ -71,12 +78,5 @@
         <link href="https://IsumiAlice.github.io/post/shi-yong-youtube-dl-xia-zai-ying-pian/">
         </link>
         <updated>2018-02-17T01:34:04.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[本站搭建過程 Hexo]]></title>
-        <id>https://IsumiAlice.github.io/post/hello-world/</id>
-        <link href="https://IsumiAlice.github.io/post/hello-world/">
-        </link>
-        <updated>2018-01-29T03:00:18.000Z</updated>
     </entry>
 </feed>
