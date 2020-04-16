@@ -2,18 +2,18 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>部落格搬家 | 死体的部落格</title>
+<title>康威生命遊戲 | 死体的部落格</title>
 <link rel="shortcut icon" href="https://IsumiAlice.github.io/favicon.ico?v=1587055183133">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://IsumiAlice.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="部落格搬家 | 死体的部落格 - Atom Feed" href="https://IsumiAlice.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="康威生命遊戲 | 死体的部落格 - Atom Feed" href="https://IsumiAlice.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="已經...不想再折騰了...
-剩下的事情明天再做👻
-" />
+    <meta name="description" content="名為 Conway 的細胞沒有足夠多的鄰居，遺憾的退出了生命遊戲
+康威生命遊戲 Conway's Game of Life，又稱康威生命棋，是英國數學家約翰·何頓·康威在1970年發明的細胞自動機。
+接下來我將實現一個簡單的康威生命遊戲，詳..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -76,28 +76,47 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              部落格搬家
+              康威生命遊戲
             </h2>
             <div class="post-info">
               <span>
-                2020-04-10
+                2020-04-17
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
               
             </div>
             
-              <img class="post-feature-image" src="https://IsumiAlice.github.io/post-images/hello-gridea.png" alt="">
+              <img class="post-feature-image" src="https://raw.githubusercontent.com/IsumiAlice/IsumiPic/master/20200414225811.png" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>已經...不想再折騰了...<br>
-剩下的事情明天再做👻</p>
+                <h2 id="名為-conway-的細胞沒有足夠多的鄰居遺憾的退出了生命遊戲">名為 <a href="https://zh.wikipedia.org/wiki/%E7%B4%84%E7%BF%B0%C2%B7%E4%BD%95%E9%A0%93%C2%B7%E5%BA%B7%E5%A8%81">Conway</a> 的細胞沒有足夠多的鄰居，遺憾的退出了生命遊戲</h2>
+<p>康威生命遊戲 Conway's Game of Life，又稱康威生命棋，是英國數學家約翰·何頓·康威在1970年發明的細胞自動機。</p>
+<p>接下來我將實現一個簡單的康威生命遊戲，詳細的資料可以參考 <a href="https://zh.wikipedia.org/wiki/%E5%BA%B7%E5%A8%81%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F">wiki 頁面</a></p>
+<h2 id="規則">規則</h2>
+<p>生命遊戲中，對於任意細胞，規則如下：</p>
+<ul>
+<li>每個細胞有兩種狀態 - 存活或死亡，每個細胞與以自身為中心的周圍八格細胞產生互動（如圖，黑色為存活，白色為死亡）</li>
+<li>當前細胞為存活狀態時，當周圍的存活細胞低於2個時（不包含2個），該細胞變成死亡狀態。（模擬生命數量稀少）</li>
+<li>當前細胞為存活狀態時，當周圍有2個或3個存活細胞時，該細胞保持原樣。</li>
+<li>當前細胞為存活狀態時，當周圍有超過3個存活細胞時，該細胞變成死亡狀態。（模擬生命數量過多）</li>
+<li>當前細胞為死亡狀態時，當周圍有3個存活細胞時，該細胞變成存活狀態。（模擬繁殖）</li>
+</ul>
+<p>可以把最初的細胞結構定義為種子，當所有在種子中的細胞同時被以上規則處理後，可以得到第一代細胞圖。按規則繼續處理當前的細胞圖，可以得到下一代的細胞圖，周而復始。</p>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%90%8D%E7%82%BA-conway-%E7%9A%84%E7%B4%B0%E8%83%9E%E6%B2%92%E6%9C%89%E8%B6%B3%E5%A4%A0%E5%A4%9A%E7%9A%84%E9%84%B0%E5%B1%85%E9%81%BA%E6%86%BE%E7%9A%84%E9%80%80%E5%87%BA%E4%BA%86%E7%94%9F%E5%91%BD%E9%81%8A%E6%88%B2">名為 Conway 的細胞沒有足夠多的鄰居，遺憾的退出了生命遊戲</a></li>
+<li><a href="#%E8%A6%8F%E5%89%87">規則</a></li>
+</ul>
+</li>
+</ul>
+
               </div>
             </div>
           </article>
@@ -106,9 +125,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://IsumiAlice.github.io/post/Ras-helloworld/">
+            <a href="https://IsumiAlice.github.io/post/3zf3BZtNm/">
               <h3 class="post-title">
-                Raspberry 基礎配置
+                物理學中的「四大神獸」
               </h3>
             </a>
           </div>
