@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>康威生命遊戲 | 死体的部落格</title>
-<link rel="shortcut icon" href="https://IsumiAlice.github.io/favicon.ico?v=1587055183133">
+<link rel="shortcut icon" href="https://IsumiAlice.github.io/favicon.ico?v=1587055651734">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://IsumiAlice.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="康威生命遊戲 | 死体的部落格 - Atom Feed" href="https://IsumiAlice.github.io/atom.xml">
@@ -11,10 +11,12 @@
 
 
 
-    <meta name="description" content="名為 Conway 的細胞沒有足夠多的鄰居，遺憾的退出了生命遊戲
+    <meta name="description" content="
+2020.4.11，名為 Conway 的細胞沒有足夠多的鄰居，遺憾的退出了生命遊戲
+
 康威生命遊戲 Conway's Game of Life，又稱康威生命棋，是英國數學家約翰·何頓·康威在1970年發明的細胞自動機。
-接下來我將實現一個簡單的康威生命遊戲，詳..." />
-    <meta name="keywords" content="" />
+接下來我將實現一..." />
+    <meta name="keywords" content="科普,數學" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -23,7 +25,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://IsumiAlice.github.io">
-  <img class="avatar" src="https://IsumiAlice.github.io/images/avatar.png?v=1587055183133" alt="">
+  <img class="avatar" src="https://IsumiAlice.github.io/images/avatar.png?v=1587055651734" alt="">
   </a>
   <h1 class="site-title">
     死体的部落格
@@ -86,13 +88,23 @@
                 2 min read
               </span>
               
+                <a href="https://IsumiAlice.github.io/tag/YPTPgmhWP/" class="post-tag">
+                  # 科普
+                </a>
+              
+                <a href="https://IsumiAlice.github.io/tag/jBseUEYdhs/" class="post-tag">
+                  # 數學
+                </a>
+              
             </div>
             
               <img class="post-feature-image" src="https://raw.githubusercontent.com/IsumiAlice/IsumiPic/master/20200414225811.png" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h2 id="名為-conway-的細胞沒有足夠多的鄰居遺憾的退出了生命遊戲">名為 <a href="https://zh.wikipedia.org/wiki/%E7%B4%84%E7%BF%B0%C2%B7%E4%BD%95%E9%A0%93%C2%B7%E5%BA%B7%E5%A8%81">Conway</a> 的細胞沒有足夠多的鄰居，遺憾的退出了生命遊戲</h2>
+                <blockquote>
+<p>2020.4.11，名為 <a href="https://zh.wikipedia.org/wiki/%E7%B4%84%E7%BF%B0%C2%B7%E4%BD%95%E9%A0%93%C2%B7%E5%BA%B7%E5%A8%81">Conway</a> 的細胞沒有足夠多的鄰居，遺憾的退出了生命遊戲</p>
+</blockquote>
 <p>康威生命遊戲 Conway's Game of Life，又稱康威生命棋，是英國數學家約翰·何頓·康威在1970年發明的細胞自動機。</p>
 <p>接下來我將實現一個簡單的康威生命遊戲，詳細的資料可以參考 <a href="https://zh.wikipedia.org/wiki/%E5%BA%B7%E5%A8%81%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F">wiki 頁面</a></p>
 <h2 id="規則">規則</h2>
@@ -111,7 +123,6 @@
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E5%90%8D%E7%82%BA-conway-%E7%9A%84%E7%B4%B0%E8%83%9E%E6%B2%92%E6%9C%89%E8%B6%B3%E5%A4%A0%E5%A4%9A%E7%9A%84%E9%84%B0%E5%B1%85%E9%81%BA%E6%86%BE%E7%9A%84%E9%80%80%E5%87%BA%E4%BA%86%E7%94%9F%E5%91%BD%E9%81%8A%E6%88%B2">名為 Conway 的細胞沒有足夠多的鄰居，遺憾的退出了生命遊戲</a></li>
 <li><a href="#%E8%A6%8F%E5%89%87">規則</a></li>
 </ul>
 </li>
