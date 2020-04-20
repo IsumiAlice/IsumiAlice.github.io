@@ -2,13 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://IsumiAlice.github.io</id>
     <title>死体的部落格</title>
-    <updated>2020-04-16T16:47:33.609Z</updated>
+    <updated>2020-04-20T14:07:58.542Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://IsumiAlice.github.io"/>
     <link rel="self" href="https://IsumiAlice.github.io/atom.xml"/>
     <logo>https://IsumiAlice.github.io/images/avatar.png</logo>
     <icon>https://IsumiAlice.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 死体的部落格</rights>
+    <entry>
+        <title type="html"><![CDATA[Arm Performance Libraries 環境配置]]></title>
+        <id>https://IsumiAlice.github.io/post/koJCJJ3ay/</id>
+        <link href="https://IsumiAlice.github.io/post/koJCJJ3ay/">
+        </link>
+        <updated>2020-04-19T13:51:50.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[康威生命遊戲]]></title>
         <id>https://IsumiAlice.github.io/post/8wQ7j8r3w/</id>
@@ -71,12 +78,5 @@
         <link href="https://IsumiAlice.github.io/post/yi-dao-qing-ren-jie-de-mi-ma-ti/">
         </link>
         <updated>2018-08-17T11:18:12.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[「北野武的小酒館」讀書筆記]]></title>
-        <id>https://IsumiAlice.github.io/post/bei-ye-wu-de-xiao-jiu-guan-du-shu-bi-ji/</id>
-        <link href="https://IsumiAlice.github.io/post/bei-ye-wu-de-xiao-jiu-guan-du-shu-bi-ji/">
-        </link>
-        <updated>2018-05-02T04:10:53.000Z</updated>
     </entry>
 </feed>
