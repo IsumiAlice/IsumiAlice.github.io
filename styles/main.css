@@ -975,6 +975,10 @@ td {
   font-weight: bold;
 }
 
+      .post-detail .post .post-content p {
+        font-size: 14px;
+      }
+    
       .post-container .post .post-title {
         text-align: center;
       }
@@ -993,10 +997,10 @@ td {
       }
     
       .main {
-        background: #e5dbff;
+        background: #fff5f5;
       }
     
       body {
-        background: #e5dbff;
+        background: #fff5f5;
       }
     
