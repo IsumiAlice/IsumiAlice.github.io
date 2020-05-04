@@ -1,0 +1,232 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ray Tracing in a Weekend | 死体的部落格</title>
+<link rel="shortcut icon" href="https://IsumiAlice.github.io/favicon.ico?v=1588598069094">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://IsumiAlice.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Ray Tracing in a Weekend | 死体的部落格 - Atom Feed" href="https://IsumiAlice.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="首先, 關於為什麽使用 C++, 因為 Python 太慢了而且直接抄原作者的程式碼多香啊這裡直接貼程式碼截圖, 因為原作者的程式碼段在修改位置有高亮, 方便閱讀
+
+1. 輸出影像
+直接採用一個純文字的 PPM 檔案, 畫素資訊從左至右從上..." />
+    <meta name="keywords" content="圖形學,光綫追蹤" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://IsumiAlice.github.io">
+  <img class="avatar" src="https://IsumiAlice.github.io/images/avatar.png?v=1588598069094" alt="">
+  </a>
+  <h1 class="site-title">
+    死体的部落格
+  </h1>
+  <p class="site-description">
+    
+    <form id="gridea-search-form" data-update="1588598069094" action="/search/">
+      <input name="q" />
+    </form>
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首頁
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          歸檔
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          標籤
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          關於
+        </a>
+      
+    
+  </div>
+  
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Ray Tracing in a Weekend
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-03-25
+              </span>
+              <span>
+                8 min read
+              </span>
+              
+                <a href="https://IsumiAlice.github.io/tag/aHVqSEOpa/" class="post-tag">
+                  # 圖形學
+                </a>
+              
+                <a href="https://IsumiAlice.github.io/tag/_9YY2XJjRJ/" class="post-tag">
+                  # 光綫追蹤
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://raw.githubusercontent.com/IsumiAlice/IsumiPic/master/20200424220814.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>首先, 關於為什麽使用 C++, 因為 Python 太慢了<br />而且直接抄原作者的程式碼多香啊<br />這裡直接貼程式碼截圖, 因為原作者的程式碼段在修改位置有高亮, 方便閱讀<br>
+<a name="3VSpX"></a></p>
+<h1 id="1-輸出影像">1. 輸出影像</h1>
+<p>直接採用一個純文字的 PPM 檔案, 畫素資訊從左至右從上至下的方式輸出<br />可以使用 PPM Viewer 讀取<br />書中給出的程式碼直接將資料打印出來, 這裡我改為直接寫入一個 PPM 檔案中<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584045627836-87efef46-683d-4620-8df7-96c4ac6bcf9c.png#align=left&amp;display=inline&amp;height=160&amp;name=image.png&amp;originHeight=160&amp;originWidth=765&amp;size=67737&amp;status=done&amp;style=none&amp;width=765" alt="image.png" loading="lazy"><br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584365782727-fae3aaa2-4811-4c1c-9cbd-a2ff86a5cd81.png#align=left&amp;display=inline&amp;height=345&amp;name=image.png&amp;originHeight=345&amp;originWidth=675&amp;size=19903&amp;status=done&amp;style=none&amp;width=675" alt="image.png" loading="lazy"><br />輸出: <br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584365222978-7a0d1214-43c4-4ab2-90fb-14e97492c51a.png#align=left&amp;display=inline&amp;height=293&amp;name=image.png&amp;originHeight=293&amp;originWidth=593&amp;size=246525&amp;status=done&amp;style=none&amp;width=593" alt="image.png" loading="lazy"><br>
+<a name="vJlw2"></a></p>
+<h1 id="2-3d-vector-class">2. 3D Vector Class</h1>
+<p>一個簡單的向量操作 Class, 包含了向量的加減, 點乘, 叉乘, 標準化...<br />程式碼就不貼了<br />使用 vec3 類重寫上一節的程式<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584365807368-02c2c20f-15e7-46ae-8060-59b73668a825.png#align=left&amp;display=inline&amp;height=361&amp;name=image.png&amp;originHeight=361&amp;originWidth=674&amp;size=21073&amp;status=done&amp;style=none&amp;width=674" alt="image.png" loading="lazy"><br>
+<a name="tdct2"></a></p>
+<h1 id="3-rays-a-simple-camera-and-background">3. Rays, a simple camera, and background</h1>
+<p><strong>ray class</strong><br /><strong><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584365883207-5d5c5fa8-fdf6-47e5-bf7e-024c6643395e.png#align=left&amp;display=inline&amp;height=215&amp;name=image.png&amp;originHeight=215&amp;originWidth=674&amp;size=12802&amp;status=done&amp;style=none&amp;width=674" alt="image.png" loading="lazy"></strong><br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584046006272-9b51db4a-a4d2-4926-a38f-822822389c8a.png#align=left&amp;display=inline&amp;height=196&amp;name=image.png&amp;originHeight=196&amp;originWidth=488&amp;size=32501&amp;status=done&amp;style=none&amp;width=488" alt="image.png" loading="lazy"><br />其中 A 表示射線起點, B 表示方向, point_at_parameter 可以根據給定的 t 返回支線AB上任意位置的三維座標<br />座標系<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584047445372-45642701-49dc-421a-ab12-5b2ef0daa277.png#align=left&amp;display=inline&amp;height=280&amp;name=image.png&amp;originHeight=280&amp;originWidth=700&amp;size=91683&amp;status=done&amp;style=none&amp;width=700" alt="image.png" loading="lazy"><br />設定世界座標系和觀察平面, 攝像機位置在世界座標系原點, 螢幕座標以左下角為原點, (u, v) 表示螢幕上畫素點的位置(數值標準化到 0 1 區間)<br />修改 main 函式, 新增 4 個 vec3, 分別表示螢幕的左下角, 螢幕寬度, 螢幕高度, 相機位置<br /><strong><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584365894729-bc49d458-044e-4a41-9b55-1bbf085086c1.png#align=left&amp;display=inline&amp;height=583&amp;name=image.png&amp;originHeight=583&amp;originWidth=678&amp;size=39512&amp;status=done&amp;style=none&amp;width=678" alt="image.png" loading="lazy"></strong><br />**天空背景: **採用 color 函式來計算每個畫素的顏色, 相當於一個 RayGeneration Shader, 對於每條射線, 計算輸出的顏色並返回主程式<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584285112956-2f957415-25ed-49b8-bdfe-5609b7520452.png#align=left&amp;display=inline&amp;height=264&amp;name=image.png&amp;originHeight=264&amp;originWidth=535&amp;size=39299&amp;status=done&amp;style=none&amp;width=535" alt="image.png" loading="lazy"><br>
+<a name="iBzKM"></a></p>
+<h1 id="4-添加一個球">4. 添加一個球</h1>
+<p>因為球的求交容易, 所以從球開始<br />計算公式很簡單, 略<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584046706720-df5f0fb4-1b5b-41ab-ae6b-67a4fc0a9bf6.png#align=left&amp;display=inline&amp;height=231&amp;name=image.png&amp;originHeight=231&amp;originWidth=400&amp;size=40450&amp;status=done&amp;style=none&amp;width=400" alt="image.png" loading="lazy"><br /><strong><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584365912197-e046129e-f4cc-4a3b-8552-80799d772799.png#align=left&amp;display=inline&amp;height=310&amp;name=image.png&amp;originHeight=310&amp;originWidth=676&amp;size=24265&amp;status=done&amp;style=none&amp;width=676" alt="image.png" loading="lazy"></strong><br />通過 hit_sphere 來進行 hit 檢測, 也相當於一個 Shader, 一條光纖和球可能有 012 個交點如果 hit, 則返回紅色, 因此可以得到一個紅色的無立體感的球<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584046823640-61e5b377-23e8-4487-842f-7839eeea6b95.png#align=left&amp;display=inline&amp;height=229&amp;name=image.png&amp;originHeight=229&amp;originWidth=459&amp;size=77323&amp;status=done&amp;style=none&amp;width=459" alt="image.png" loading="lazy"><br>
+<a name="VsTCF"></a></p>
+<h1 id="5-表面法線與多個物件">5. 表面法線與多個物件</h1>
+<p>前一節略的公式可以計算出球和光線相交位置的 t 值, 從而得到 hit 的三維座標, 因為是處理球體, hit 處的法線可以直接通過球心和 hit 位置的兩個座標得到<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584046870708-2ea5f3d9-cdca-488d-90e2-0ff8beba369f.png#align=left&amp;display=inline&amp;height=215&amp;name=image.png&amp;originHeight=215&amp;originWidth=407&amp;size=64880&amp;status=done&amp;style=none&amp;width=407" alt="image.png" loading="lazy"><br />hit_sphere 不再返回是否有 hit, 而是返回 hit 的位置<br />將法向量的值作為 hit 位置的顏色輸出<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584365923372-cfa46bbd-7d6c-4d19-8b38-0052a70b722c.png#align=left&amp;display=inline&amp;height=442&amp;name=image.png&amp;originHeight=442&amp;originWidth=678&amp;size=33316&amp;status=done&amp;style=none&amp;width=678" alt="image.png" loading="lazy"><br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584285138130-a02c7cb0-aa72-48f3-9bf9-2feaf99d8ff2.png#align=left&amp;display=inline&amp;height=254&amp;name=image.png&amp;originHeight=254&amp;originWidth=507&amp;size=109180&amp;status=done&amp;style=none&amp;width=507" alt="image.png" loading="lazy"><br />hit_record, 引數 t 和 p 均表示 hit 的位置, normal 是法向量<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584365974306-fd2a5bc3-f8af-4ca8-8839-51d8265961c1.png#align=left&amp;display=inline&amp;height=195&amp;name=image.png&amp;originHeight=195&amp;originWidth=671&amp;size=9850&amp;status=done&amp;style=none&amp;width=671" alt="image.png" loading="lazy"><br />接下來將球體的程式碼抽象出來, 實現一個 hitable 類, 具有虛擬函式 hit, 輸入光線 r, 最小取樣距離 t_min, 最大采樣距離 t_max, hit_record 的引用 &amp;rec<br />sphere 類, 引數為球心和半徑<br />sphere::hit, 如果有交點那麼用求根公式算出較小的根, 如果在取樣範圍內, 則寫入 &amp;rec, 否則計算較大的根<br />為了處理多個物體, 採用一個hitable_list, 儲存一個 hitable 指標陣列及其大小<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584365994018-f4e285fe-9a64-48f2-8a1a-eee629e3826f.png#align=left&amp;display=inline&amp;height=733&amp;name=image.png&amp;originHeight=733&amp;originWidth=679&amp;size=46706&amp;status=done&amp;style=none&amp;width=679" alt="image.png" loading="lazy"><br />hitable_list 也可以被碰撞檢測, temp_rec 記錄最後 hit 的資訊, hit_anything 表示是否有 hit, closest_so_far 記錄最近的 hit 位置<br />然後迴圈對列表中的每個可 hit 物體進行檢測, 取樣射線 r 保持, 最小取樣距離不變, 最大距離不斷更新為closest_so_far<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366017533-a89d0802-8c22-4961-aacd-8e3c9c09dcfd.png#align=left&amp;display=inline&amp;height=466&amp;name=image.png&amp;originHeight=466&amp;originWidth=677&amp;size=30557&amp;status=done&amp;style=none&amp;width=677" alt="image.png" loading="lazy"><br />更新main和color函式, color添加了一個可撞擊物的引數, 聲明瞭撞擊記錄變數, 後面的法向量就是從記錄中獲取的, 取樣最大距離初始化為浮點數最大值<br />main函式聲明瞭兩個球組成的 list, 然後構造為 hitable_list 物件<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366113734-56c8cda6-6bbc-449e-acd5-3935dc34c299.png#align=left&amp;display=inline&amp;height=869&amp;name=image.png&amp;originHeight=869&amp;originWidth=610&amp;size=58565&amp;status=done&amp;style=none&amp;width=610" alt="image.png" loading="lazy"><br />輸出:<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584285160858-ce68825f-ad16-4386-bc19-c0209b25f996.png#align=left&amp;display=inline&amp;height=259&amp;name=image.png&amp;originHeight=259&amp;originWidth=521&amp;size=124558&amp;status=done&amp;style=none&amp;width=521" alt="image.png" loading="lazy"><br>
+<a name="9AwFE"></a></p>
+<h1 id="6-反鋸齒">6. 反鋸齒</h1>
+<p>為什麼會有鋸齒？<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584050008192-fc814beb-aa5e-4533-870e-1e1dc55053fa.png#align=left&amp;display=inline&amp;height=228&amp;name=image.png&amp;originHeight=228&amp;originWidth=383&amp;size=40688&amp;status=done&amp;style=none&amp;width=383" alt="image.png" loading="lazy"><br />採用蒙特卡洛方法對單個畫素內的區域進行隨機取樣, 然後得到 color 取均值<br />順帶將攝像機位置抽象為一個 class:<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366177950-aa9800b3-371b-487b-b123-3f221405f9da.png#align=left&amp;display=inline&amp;height=313&amp;name=image.png&amp;originHeight=313&amp;originWidth=675&amp;size=19111&amp;status=done&amp;style=none&amp;width=675" alt="image.png" loading="lazy"><br />更新 main: <br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366186886-081a3999-bdd3-4cd1-b581-6e5d28ca3daf.png#align=left&amp;display=inline&amp;height=513&amp;name=image.png&amp;originHeight=513&amp;originWidth=676&amp;size=35540&amp;status=done&amp;style=none&amp;width=676" alt="image.png" loading="lazy"><br />可以看到邊緣處的顏色得到了處理<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584050017277-e237f056-6cc9-4b39-86a0-4da9b9141687.png#align=left&amp;display=inline&amp;height=368&amp;name=image.png&amp;originHeight=368&amp;originWidth=350&amp;size=113614&amp;status=done&amp;style=none&amp;width=350" alt="image.png" loading="lazy"><br>
+<a name="aptt9"></a></p>
+<h1 id="7-漫反射-diffuse-materials">7. 漫反射 Diffuse Materials</h1>
+<p><br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584050096687-68e43bfd-eabe-44e5-aafe-52ea72a42383.png#align=left&amp;display=inline&amp;height=301&amp;name=image.png&amp;originHeight=301&amp;originWidth=635&amp;size=62589&amp;status=done&amp;style=none&amp;width=635" alt="image.png" loading="lazy"><br />將我們的球球假設為理想的朗博體, 處理方法是在 hit 處的表面發現方向, 做一個半徑為 1 的單位球, 在球內隨機取點, 作為反射的方向<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584050103351-f0522f57-e221-4345-bfcb-ae243f8d8592.png#align=left&amp;display=inline&amp;height=309&amp;name=image.png&amp;originHeight=309&amp;originWidth=608&amp;size=42239&amp;status=done&amp;style=none&amp;width=608" alt="image.png" loading="lazy"><br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366230797-9b177ba3-e2be-43f4-81e7-13b0e70b70e2.png#align=left&amp;display=inline&amp;height=123&amp;name=image.png&amp;originHeight=123&amp;originWidth=673&amp;size=8697&amp;status=done&amp;style=none&amp;width=673" alt="image.png" loading="lazy"><br />color 採用 target 反射的位置, 不再返回法向量的值, 程式碼中的那句遞迴, 就是光線追蹤啊！當前處理的射線由其入射方向的顏色乘以一個衰減係數 0.5 得到, 表示物體吸收了一部分光, 直到入射光線沒有任何 hit 即是來自環境的光照（天空色）<br />後續的其他材質處理, 都是在此基礎上改變 color 的輸出<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366250237-4969c435-61e3-4c2a-a28c-eeacf51937d1.png#align=left&amp;display=inline&amp;height=237&amp;name=image.png&amp;originHeight=237&amp;originWidth=680&amp;size=18658&amp;status=done&amp;style=none&amp;width=680" alt="image.png" loading="lazy"><br />輸出的的效果比較暗, 但已經是一個有立體感的球了, 畢竟我們還沒有加入更真實的物理因素, 只是單純的將顏色乘以 0.5<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584050114733-4d62c5f9-a779-4d01-9066-1f6f86aacc14.png#align=left&amp;display=inline&amp;height=266&amp;name=image.png&amp;originHeight=266&amp;originWidth=540&amp;size=132056&amp;status=done&amp;style=none&amp;width=540" alt="image.png" loading="lazy"><br />太黑了, 所以採用 gamma 矯正來提高亮度（對得到的顏色開平方, 因為值都是01之間, 所以開方後會變大）<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366274401-7f83da1a-3e6e-4553-9b95-be93302d10d7.png#align=left&amp;display=inline&amp;height=139&amp;name=image.png&amp;originHeight=139&amp;originWidth=676&amp;size=9937&amp;status=done&amp;style=none&amp;width=676" alt="image.png" loading="lazy"><br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584050681017-b7bd4c36-5c75-46ff-b9de-cb77d1cd5c04.png#align=left&amp;display=inline&amp;height=263&amp;name=image.png&amp;originHeight=263&amp;originWidth=529&amp;size=111278&amp;status=done&amp;style=none&amp;width=529" alt="image.png" loading="lazy"><br>
+<a name="psbhU"></a></p>
+<h1 id="8-金屬-metal">8. 金屬 Metal</h1>
+<p>先把上一節的內容抽象為一個 material class, 四個引數, hit in 射線, hit record（因為先檢測碰撞再考慮材質）, 衰減率, 下一步的取樣方向（折射、反射或其他）<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366295725-1637b0a5-0b4b-4e3b-a233-02ec61dc3ce0.png#align=left&amp;display=inline&amp;height=135&amp;name=image.png&amp;originHeight=135&amp;originWidth=673&amp;size=7783&amp;status=done&amp;style=none&amp;width=673" alt="image.png" loading="lazy"><br />hit record 增加對材質的記錄<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366305892-a6af61d9-fd0c-4d92-9b05-17f9046088fa.png#align=left&amp;display=inline&amp;height=259&amp;name=image.png&amp;originHeight=259&amp;originWidth=672&amp;size=12469&amp;status=done&amp;style=none&amp;width=672" alt="image.png" loading="lazy"><br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366370029-5cfffe02-c88f-4729-8cf1-01a9000e1237.png#align=left&amp;display=inline&amp;height=664&amp;name=image.png&amp;originHeight=664&amp;originWidth=672&amp;size=47218&amp;status=done&amp;style=none&amp;width=672" alt="image.png" loading="lazy"><br />上一節的朗伯體:<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366427775-501c89cd-d48b-4f1d-942a-9d58a8b3627f.png#align=left&amp;display=inline&amp;height=256&amp;name=image.png&amp;originHeight=256&amp;originWidth=676&amp;size=17180&amp;status=done&amp;style=none&amp;width=676" alt="image.png" loading="lazy"><br />這一節主要考慮光滑表面的反射<br />反射公式就是一個向量加法<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584050801991-8495c50a-5b5c-4d24-a8ea-5fed599b6235.png#align=left&amp;display=inline&amp;height=288&amp;name=image.png&amp;originHeight=288&amp;originWidth=433&amp;size=66037&amp;status=done&amp;style=none&amp;width=433" alt="image.png" loading="lazy"><br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366441434-4770367d-2377-4da0-bb36-35f3a8c8fdfe.png#align=left&amp;display=inline&amp;height=84&amp;name=image.png&amp;originHeight=84&amp;originWidth=675&amp;size=4609&amp;status=done&amp;style=none&amp;width=675" alt="image.png" loading="lazy"><br />金屬材質, 調用反射公式, 引數 albedo 表示反射率<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366452095-c215b6dc-2198-4fd0-8043-139b99b70ebd.png#align=left&amp;display=inline&amp;height=239&amp;name=image.png&amp;originHeight=239&amp;originWidth=674&amp;size=18143&amp;status=done&amp;style=none&amp;width=674" alt="image.png" loading="lazy"><br />color的計算, 新增一個迭代深度防止死迴圈<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366464021-cbcc440a-a4e6-439c-81db-91051d3bf272.png#align=left&amp;display=inline&amp;height=295&amp;name=image.png&amp;originHeight=295&amp;originWidth=672&amp;size=22568&amp;status=done&amp;style=none&amp;width=672" alt="image.png" loading="lazy"><br />main中新增兩個金屬球<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366496057-93cc5127-08e7-4270-8d34-3e5013a0ec47.png#align=left&amp;display=inline&amp;height=447&amp;name=image.png&amp;originHeight=447&amp;originWidth=676&amp;size=37621&amp;status=done&amp;style=none&amp;width=676" alt="image.png" loading="lazy"><br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584285182841-ea1191c5-0b1e-41eb-a1f2-d1b854e07e7e.png#align=left&amp;display=inline&amp;height=237&amp;name=image.png&amp;originHeight=237&amp;originWidth=478&amp;size=162668&amp;status=done&amp;style=none&amp;width=478" alt="image.png" loading="lazy"><br />金屬也是多種多樣的, 有的鏡面反射也帶著漫反射, 處理這種材質, 在反射的終點做一個球, 在球內隨機取點, 這樣反射後就從一條光線變為一束光線了<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584285192877-5c851646-1097-471f-b134-1b5726865ced.png#align=left&amp;display=inline&amp;height=307&amp;name=image.png&amp;originHeight=307&amp;originWidth=523&amp;size=76581&amp;status=done&amp;style=none&amp;width=523" alt="image.png" loading="lazy"><br />程式碼中透過 fuzz 變數控制反射範圍的大小, 最大為單位球<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366509112-3b69e9f3-23cd-46ec-88f0-d7d1fd4a6441.png#align=left&amp;display=inline&amp;height=307&amp;name=image.png&amp;originHeight=307&amp;originWidth=675&amp;size=22216&amp;status=done&amp;style=none&amp;width=675" alt="image.png" loading="lazy"><br />考慮了反射加漫射的效果, 左側 fuzz=0.3, 右側 fuzz=1.0<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584285204867-703c0971-f9bb-40aa-8bb3-3426e44c04d5.png#align=left&amp;display=inline&amp;height=266&amp;name=image.png&amp;originHeight=266&amp;originWidth=539&amp;size=215473&amp;status=done&amp;style=none&amp;width=539" alt="image.png" loading="lazy"><br>
+<a name="29A2p"></a></p>
+<h1 id="9-電介質-dielectrics">9. 電介質 Dielectrics</h1>
+<p>這一節主要考慮電介質, 指帶折射的材料, 光從一側進入從另一側射出, 如水, 玻璃等<br />Snell 折射定律 <img src="https://cdn.nlark.com/yuque/__latex/1e2b9bcb6dd8284d877e17bf61d97721.svg#card=math&amp;code=nsin%5Ctheta%3Dn%27sin%5Ctheta%27&amp;height=16&amp;width=102" alt="" loading="lazy"><br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584050869972-26860dcc-a477-436f-953e-f50067ae56b9.png#align=left&amp;display=inline&amp;height=261&amp;name=image.png&amp;originHeight=261&amp;originWidth=373&amp;size=33257&amp;status=done&amp;style=none&amp;width=373" alt="image.png" loading="lazy"><br />折射公式, 引數為入射向量, 法向量, n/n', 折射向量<br />判別式 <img src="https://cdn.nlark.com/yuque/__latex/9723d7e68728dc45c1720cc72de30cee.svg#card=math&amp;code=discriminant%3Dcos%5E2%5Ctheta%27&amp;height=16&amp;width=147" alt="" loading="lazy">的計算有點意思, 略<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366528203-470f3e09-bc05-4504-8202-2443d21c4aa9.png#align=left&amp;display=inline&amp;height=220&amp;name=image.png&amp;originHeight=220&amp;originWidth=676&amp;size=14977&amp;status=done&amp;style=none&amp;width=676" alt="image.png" loading="lazy"><br />如果判別式大於 0, 表示有折射發生, 進而計算折射向量 refracted（簡單的三角函式, 略）<br />電介質 class, 新增 ref_idx 引數表示折射率<br />散射函式 scatter, 輸入入射光線 r_in, 衰減率 attenuation, 輸出出射光 scattered<br />內定義了一個 outward_normal<br />先計算反射向量 reflected<br />再計算折射向量 refracted<br />第一個 if 判斷 dot 的結果, 如果在 90 度內, 表示是從材質內部射向空氣的光線, 將法向量取反<br />否則表示從空氣射入電介質的光線<br />第二個 if 判斷是否發生折射, 如果有折射則輸出設定為折射光, 否則設定為反射光<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366560897-ad5304d5-a2a5-4385-8e89-a3bfccc81754.png#align=left&amp;display=inline&amp;height=594&amp;name=image.png&amp;originHeight=594&amp;originWidth=672&amp;size=36295&amp;status=done&amp;style=none&amp;width=672" alt="image.png" loading="lazy"><br />場景物件列表<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366606970-3cff9b3c-2f2e-4552-a5f0-a5e4534e438d.png#align=left&amp;display=inline&amp;height=98&amp;name=image.png&amp;originHeight=98&amp;originWidth=671&amp;size=12246&amp;status=done&amp;style=none&amp;width=671" alt="image.png" loading="lazy"><br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584285230130-b202c185-3b0e-4d9c-8990-129024a3a1e0.png#align=left&amp;display=inline&amp;height=208&amp;name=image.png&amp;originHeight=208&amp;originWidth=427&amp;size=142964&amp;status=done&amp;style=none&amp;width=427" alt="image.png" loading="lazy"><br />目前處理的情況過於簡單, 有折射就不要反射了呢~<br />實際上光的傳輸是能量守恆的, 所以可以通過一個比率來控制折射和反射的能量, 比率通過菲涅爾公式得到, 這個比率和材質以及攝入的角度有關<br />實際使用中採用 schlick 公式來近似菲尼爾曲線<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366623059-f47e4da6-bf80-4f4b-9962-c4a9698449b0.png#align=left&amp;display=inline&amp;height=122&amp;name=image.png&amp;originHeight=122&amp;originWidth=668&amp;size=7462&amp;status=done&amp;style=none&amp;width=668" alt="image.png" loading="lazy"><br />更新電介質 material, 若折射, 則計算一個比率, 否則反射比率為 1<br />採用一個隨機數來判斷當前處理的光線到底該折射還是反射, 因為多次取樣求平均, 所以不用同時追蹤兩條光線<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366641391-84597ce3-5802-4d8d-a2e5-e0ffada1404e.png#align=left&amp;display=inline&amp;height=814&amp;name=image.png&amp;originHeight=814&amp;originWidth=672&amp;size=50933&amp;status=done&amp;style=none&amp;width=672" alt="image.png" loading="lazy"><br />新增一個球, 球心和左球重合, 半徑為負, 因此法向量也是負數, 相當於把左球再翻轉一次, 從而得到一個透明玻璃球的特效<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366656494-b4c160ad-86e1-4388-8aad-0772cfbb300b.png#align=left&amp;display=inline&amp;height=117&amp;name=image.png&amp;originHeight=117&amp;originWidth=669&amp;size=14948&amp;status=done&amp;style=none&amp;width=669" alt="image.png" loading="lazy"><br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584285239134-ec093cb0-4ae5-425b-8b67-a814e46699c1.png#align=left&amp;display=inline&amp;height=232&amp;name=image.png&amp;originHeight=232&amp;originWidth=470&amp;size=162406&amp;status=done&amp;style=none&amp;width=470" alt="image.png" loading="lazy"><br>
+<a name="FtR2r"></a></p>
+<h1 id="10-改變相機位置">10. 改變相機位置</h1>
+<p>是時候把 main 函式中的 camera 也抽象出來了, 相機可以看作一個四稜錐, 渲染它的切面<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584285255769-e911043b-fa43-4752-b803-124037ef9527.png#align=left&amp;display=inline&amp;height=310&amp;name=image.png&amp;originHeight=310&amp;originWidth=358&amp;size=49549&amp;status=done&amp;style=none&amp;width=358" alt="image.png" loading="lazy"><br />先給 camera 新增兩個引數, theta角度和寬高比, 根據角度計算出螢幕高度, 然後得出寬度, 其他向量都跟著改變<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366679315-97f0986a-15c9-43a8-9644-b6ca54ef1ec4.png#align=left&amp;display=inline&amp;height=374&amp;name=image.png&amp;originHeight=374&amp;originWidth=667&amp;size=27276&amp;status=done&amp;style=none&amp;width=667" alt="image.png" loading="lazy"><br />接下來讓 camera 旋轉起來, Vup 一般是一個全域性向量 (0,1,0), 另外三個軸 uvw 負責選擇<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584285364471-0bb3a9a4-ca1c-4e45-b23f-b0c161c3644b.png#align=left&amp;display=inline&amp;height=248&amp;name=image.png&amp;originHeight=248&amp;originWidth=849&amp;size=82627&amp;status=done&amp;style=none&amp;width=849" alt="image.png" loading="lazy"><br />再向 camera class 中新增 lookfrom, lookat, 根據兩個點確定 -w 這個觀察方向, 然後計算出 u 和 v<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366704993-9020ed29-2d61-41af-a0f6-ed183f538683.png#align=left&amp;display=inline&amp;height=455&amp;name=image.png&amp;originHeight=455&amp;originWidth=670&amp;size=32374&amp;status=done&amp;style=none&amp;width=670" alt="image.png" loading="lazy"><br />main中修改視點:<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366728239-6b36cf8e-70e2-4e6e-905e-183ee97ab920.png#align=left&amp;display=inline&amp;height=45&amp;name=image.png&amp;originHeight=45&amp;originWidth=671&amp;size=3921&amp;status=done&amp;style=none&amp;width=671" alt="image.png" loading="lazy"><br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584285374546-6eeb63cb-3a50-4725-8e8c-ccab733654c7.png#align=left&amp;display=inline&amp;height=238&amp;name=image.png&amp;originHeight=238&amp;originWidth=486&amp;size=68417&amp;status=done&amp;style=none&amp;width=486" alt="image.png" loading="lazy"><br>
+<a name="xLSDO"></a></p>
+<h1 id="11-景深">11. 景深</h1>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584285385510-bec9729d-e30c-4c0e-abb7-4d5fbc65b9e9.png#align=left&amp;display=inline&amp;height=250&amp;name=image.png&amp;originHeight=250&amp;originWidth=363&amp;size=47180&amp;status=done&amp;style=none&amp;width=363" alt="image.png" loading="lazy"><br />相機分為三部分, 感光膠片, 透鏡, 成像平面, inside 決定聚焦, outside 決定散焦, 因此模擬 outside 部分<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584285395187-91c008f2-25e6-49ef-9cc2-606e5ac3f038.png#align=left&amp;display=inline&amp;height=227&amp;name=image.png&amp;originHeight=227&amp;originWidth=485&amp;size=56348&amp;status=done&amp;style=none&amp;width=485" alt="image.png" loading="lazy"><br />觀察點從一個點改為一個給定尺寸的三維圓, 射線在園內隨機位置射出<br />隨機函式<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366774107-48545752-ef2f-4d96-a75d-8421c8b2450b.png#align=left&amp;display=inline&amp;height=133&amp;name=image.png&amp;originHeight=133&amp;originWidth=671&amp;size=8160&amp;status=done&amp;style=none&amp;width=671" alt="image.png" loading="lazy"><br />camera class<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366763540-37970592-a76e-43e7-9fbe-f743271d7d1d.png#align=left&amp;display=inline&amp;height=602&amp;name=image.png&amp;originHeight=602&amp;originWidth=672&amp;size=42668&amp;status=done&amp;style=none&amp;width=672" alt="image.png" loading="lazy"><br />添加了光圈大小 aperture, 焦距 focus dist 不再固定為 1<br />配置一下方向和大光圈<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584366795499-dfb94d34-d5d5-4c2f-820f-a1f82ede9626.png#align=left&amp;display=inline&amp;height=149&amp;name=image.png&amp;originHeight=149&amp;originWidth=668&amp;size=10975&amp;status=done&amp;style=none&amp;width=668" alt="image.png" loading="lazy"><br />輸出:<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584285410302-d9a5c204-1842-454d-9a65-c750478fa0af.png#align=left&amp;display=inline&amp;height=261&amp;name=image.png&amp;originHeight=261&amp;originWidth=520&amp;size=158786&amp;status=done&amp;style=none&amp;width=520" alt="image.png" loading="lazy"><br>
+<a name="QRXGn"></a></p>
+<h1 id="end">End</h1>
+<p>書中最終程式碼渲染的結果<br />跑了四分鐘( 笑 )<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/1092150/1584364905191-6a33c9af-8850-4fa6-aab6-804fa8dd7e87.png#align=left&amp;display=inline&amp;height=1380&amp;name=image.png&amp;originHeight=1380&amp;originWidth=2085&amp;size=5237301&amp;status=done&amp;style=none&amp;width=2085" alt="image.png" loading="lazy"></p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#1-%E8%BC%B8%E5%87%BA%E5%BD%B1%E5%83%8F">1. 輸出影像</a></li>
+<li><a href="#2-3d-vector-class">2. 3D Vector Class</a></li>
+<li><a href="#3-rays-a-simple-camera-and-background">3. Rays, a simple camera, and background</a></li>
+<li><a href="#4-%E6%B7%BB%E5%8A%A0%E4%B8%80%E5%80%8B%E7%90%83">4. 添加一個球</a></li>
+<li><a href="#5-%E8%A1%A8%E9%9D%A2%E6%B3%95%E7%B7%9A%E8%88%87%E5%A4%9A%E5%80%8B%E7%89%A9%E4%BB%B6">5. 表面法線與多個物件</a></li>
+<li><a href="#6-%E5%8F%8D%E9%8B%B8%E9%BD%92">6. 反鋸齒</a></li>
+<li><a href="#7-%E6%BC%AB%E5%8F%8D%E5%B0%84-diffuse-materials">7. 漫反射 Diffuse Materials</a></li>
+<li><a href="#8-%E9%87%91%E5%B1%AC-metal">8. 金屬 Metal</a></li>
+<li><a href="#9-%E9%9B%BB%E4%BB%8B%E8%B3%AA-dielectrics">9. 電介質 Dielectrics</a></li>
+<li><a href="#10-%E6%94%B9%E8%AE%8A%E7%9B%B8%E6%A9%9F%E4%BD%8D%E7%BD%AE">10. 改變相機位置</a></li>
+<li><a href="#11-%E6%99%AF%E6%B7%B1">11. 景深</a></li>
+<li><a href="#end">End</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://IsumiAlice.github.io/post/RHud701ar/">
+              <h3 class="post-title">
+                使用 Windows 時經常遇到的問題
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://IsumiAlice.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

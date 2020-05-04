@@ -1,0 +1,217 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>隨機性和亂數 | 死体的部落格</title>
+<link rel="shortcut icon" href="https://IsumiAlice.github.io/favicon.ico?v=1588598069094">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://IsumiAlice.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="隨機性和亂數 | 死体的部落格 - Atom Feed" href="https://IsumiAlice.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="RANDOM.ORG是一個真正的亂數服務，它通過大氣雜訊生成隨機性。
+亂數可用於各種目的，例如生成資料加密金鑰、類比和建模複雜現象以及從較大的資料集中選擇隨機樣本。它們也在美學上使用，例如在文學和音樂中，當然也流行於遊戲和賭博。在討論單個數..." />
+    <meta name="keywords" content="科普,數學" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://IsumiAlice.github.io">
+  <img class="avatar" src="https://IsumiAlice.github.io/images/avatar.png?v=1588598069094" alt="">
+  </a>
+  <h1 class="site-title">
+    死体的部落格
+  </h1>
+  <p class="site-description">
+    
+    <form id="gridea-search-form" data-update="1588598069094" action="/search/">
+      <input name="q" />
+    </form>
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首頁
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          歸檔
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          標籤
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          關於
+        </a>
+      
+    
+  </div>
+  
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              隨機性和亂數
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-02-04
+              </span>
+              <span>
+                10 min read
+              </span>
+              
+                <a href="https://IsumiAlice.github.io/tag/YPTPgmhWP/" class="post-tag">
+                  # 科普
+                </a>
+              
+                <a href="https://IsumiAlice.github.io/tag/jBseUEYdhs/" class="post-tag">
+                  # 數學
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://raw.githubusercontent.com/IsumiAlice/IsumiPic/master/20200126012102.PNG" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>RANDOM.ORG是一個真正的亂數服務，它通過大氣雜訊生成隨機性。</p>
+<p>亂數可用於各種目的，例如生成資料加密金鑰、類比和建模複雜現象以及從較大的資料集中選擇隨機樣本。它們也在美學上使用，例如在文學和音樂中，當然也流行於遊戲和賭博。在討論單個數位時，亂數是從一組可能的值中抽取的，每個值都同樣可能，即<a href="http://en.wikipedia.org/wiki/Uniform_distribution_(discrete)">均勻分佈</a>。在討論亂數序列時，繪製的每個數位在<a href="http://en.wikipedia.org/wiki/Statistical_independence">統計上必須獨立于</a>其他數位。</p>
+<p>隨著電腦的出現，程式師認識到需要一種將隨機性引入電腦程式的方法。然而，儘管看起來令人驚訝，但讓電腦偶然做某事是很困難的。電腦盲目地遵循其指令，因此是完全可預測的。（以這種方式不遵循其說明的電腦將損壞。使用電腦生成亂數有兩種主要方法：偽亂數產生器(PRNG)和真亂數產生器(TRNG)。這些方法具有完全不同的特點，每種方法都有其優缺點。</p>
+<h3 id="偽亂數產生器">偽亂數產生器</h3>
+<p>正如&quot;偽&quot;一詞所暗示的，偽亂數不是您所期望的亂數字，至少如果你習慣于擲骰子或彩票的話。從本質上講，PRNG 是使用數學公式或只是預先計算表來生成亂數字序列的演算法。PRNG的一個很好的例子是<a href="http://en.wikipedia.org/wiki/Linear_congruential_generator">線性同餘</a>。大量的研究已經進入偽亂數理論，而現代的生成偽亂數的演算法是如此之好，以至於數位看起來與它們真正的隨機一樣。</p>
+<p>如果將電腦生成的亂數與模具捲進行比較，則 PRNG 和 TRNG 之間的基本區別很容易理解。由於 PRNG 使用數學公式或預先計算的清單生成亂數，因此使用一個對應于多次滾動模具並寫下結果的人。每當您要求一個模具卷，你得到清單中的下一個。實際上，這些數位看起來是隨機的，但它們確實是預先確定的。TRNG 的工作方式是讓電腦實際滾動模具，或者更常見的是，使用一些比模具更容易連接到電腦的物理現象。</p>
+<p>PRNG<em>是有效的</em>，這意味著它們可以在短時間內生成多個數位，並且是<em>確定的</em>，這意味著如果序列中的起點已知，則可以在以後複製給定的數位序列。如果應用程式需要許多數位，效率是一個不錯的特徵，如果您需要在稍後階段再次重播相同的數位序列，則確定性非常方便。PRNG 通常也是<em>週期性</em>的，這意味著序列最終將重複自身。雖然週期性幾乎不是一個理想的特徵，但現代 PRNG 的週期很長，可以忽略大多數實際用途。</p>
+<p>這些特性使 PRNG 適用于需要多個數位且易於重重播放相同序列的應用。此類應用程式的熱門示例是模擬和建模應用程式。PRNG 不適合那些數位確實不可預知的應用程式，例如資料加密和賭博。</p>
+<p>需要注意的是，即使存在良好的 PRNG 演算法，它們並不總是被使用，並且很容易得到令人討厭的意外。以流行的網路程式設計語言PHP為例。如果你使用PHP的GNU/Linux，你很可能完全滿意你的亂數。但是，如果您將 PHP 用於 Microsoft Windows，您可能會發現，您的亂數並不完全達到零標準，如 <a href="https://www.random.org/analysis/#visual">2008年的視覺化分析</a>所示。另一個例子可追溯到2002年，當時一位研究人員報告說，MacOS上的PRNG不足以<a href="https://www.random.org/testimonials/simulation/#2002-02-21">科學類比病毒感染</a>。底線是，即使 PRNG 能夠滿足應用程式的需求，您仍需要小心使用哪個。</p>
+<h3 id="真正的亂數產生器">真正的亂數產生器</h3>
+<p>與 PRNG 相比，TRNG 從物理現象中提取隨機性並將其引入電腦。你可以想像這是連接到電腦的模具，但通常人們使用的物理現象比模具更容易連接到電腦。物理現象可能非常簡單，例如某人的滑鼠移動或按鍵之間的時間變化很小。然而，在實踐中，你必須小心你選擇的來源。例如，以這種方式使用擊鍵可能比較棘手，因為擊鍵通常由電腦的作業系統緩衝，這意味著在將多個擊鍵發送到等待擊鍵的程式之前，會收集多個按鍵。對於一個等待擊鍵的程式，它看起來好像鍵幾乎同步選取，而且可能沒有什麼隨機性。</p>
+<p>但是，還有許多其他方法可以獲取電腦的真正隨機性。一個真正好的物理現象是一個放射源。放射源衰變的時間點是完全不可預測的，它們很容易被檢測到並輸入電腦，從而避免了作業系統中的任何緩衝機制。瑞士 Fourmilab 的<a href="http://www.fourmilab.ch/hotbits/">HotBits 服務</a>是使用此技術的亂數產生器的一個極好示例。另一個合適的物理現象是大氣雜訊，這是很容易拿起一個正常的無線電。這是RANDOM.ORG使用的方法。您也可以使用辦公室或實驗室的背景雜音，但您必須注意模式。電腦中的風扇可能會導致背景雜音，並且由於風扇是旋轉設備，因此其產生的雜訊很可能不會像大氣雜訊那樣隨機。</p>
+<p><a href="http://en.wikipedia.org/wiki/Thunderstorm"><img src="https://www.random.org/randomness/180px-Denver_Lightning.jpg" alt="Thunderstorm over Denver, USA" loading="lazy"></a><br>
+雷雨產生大氣噪音</p>
+<p>只要你小心，可能性是無窮無盡的。毫無疑問，視覺上最酷的方法是<a href="http://en.wikipedia.org/wiki/Lavarand">拉瓦蘭發電機</a>，它由矽圖形構建，並使用<a href="http://www.lavaworld.com/">熔岩燈</a>的快照來生成真正的亂數。不幸的是，拉瓦蘭不再運作，但它的發明者之一正在<a href="http://www.lavarnd.org/">LavaRnd</a>網站上（沒有熔岩燈）進行這項工作。另一種方法是<a href="http://random.hd.org/index.html">JAVA熵Pool，</a>它收集來自各種來源的隨機位，包括HotBits和RANDOM.ORG，但也從熵Pool自己的Web伺服器收到的網頁點擊。</p>
+<p>無論使用哪種物理現象，生成真實亂數的過程都涉及識別資料中很少、不可預測的變化。例如，HotBits在放射性衰變發生之間的延遲變化很小，而RANDOM.ORG在大氣雜訊振幅上使用的變化很小。</p>
+<p>TRNG 的特性與 PRNG 有很大不同。首先，與 PRNG 相比，TRN 通常<em>效率很低</em>，生成數位的時間要長得多。它們也是<em>非確定性</em>的，這意味著一個給定的數位序列不能被覆制，儘管同樣的序列當然會偶然出現幾次。TRNG 沒有期限。</p>
+<h3 id="量子事件還是混沌系統">量子事件還是混沌系統？</h3>
+<p>TRNG的構建者有時討論的一個特徵是所使用的物理現象是<em>量子</em>現象還是<em>混沌</em>行為現象。對於量子現象是否更好，存在著一些分歧，奇怪的是，這一切都歸結于我們對宇宙運作方式的信念。關鍵問題是宇宙是否是<em>確定性</em>的，也就是說，自<a href="http://en.wikipedia.org/wiki/Big_Bang">大爆炸</a>以來發生的一切是否基本上是預先確定的。決定論是一個困難的課題，它一直是許多哲學探究的主題，而這個問題遠沒有你想像的那麼清晰。我會嘗試在這裡解釋，但也要指出，Wiki 有一個<a href="http://en.wikipedia.org/wiki/Determinism">簡明的敘述的辯論</a>。</p>
+<p>量子力學是理論物理學的一個分支，在原子和亞原子水準上用數學來描述宇宙。基於量子物理的亂數產生器使用亞原子粒子在某些情況下似乎隨機現象這一事實。似乎我們所知沒有任何原因導致這些事件，因此，許多人認為這些事件是無確定性的。</p>
+<p>相比之下，混沌系統是指初始條件的微小變化可能導致系統整體行為發生巨大變化的系統。天氣系統就是一個很好的例子，你可能聽說過<a href="http://en.wikipedia.org/wiki/Butterfly_effect">蝴蝶效應</a>，這是一個思想實驗，一隻蝴蝶在巴西拍打翅膀，能夠微妙但批判地影響風，足以在德克薩斯州引發龍捲風。</p>
+<p>量子變化亂數產生器的支援者認為量子物理學本質上是非確定性的，而由物理控制的系統本質上是確定性的。我個人尚未決定我的立場，在決定論-非決定論尺度上的立場，但為了爭論，我將戴上我最震懾的帽子，用RANDOM.ORG作為例子。你可能會爭辯說，大氣雜訊作為RANDOM.ORG數位的來源可以被看作是一個混亂但確定性的系統。因此，如果您對引起大氣噪音（例如雷暴）的過程有足夠的瞭解，則可以預測RANDOM.ORG產生的數量。</p>
+<p>然而，要做到這一點，你可能需要瞭解地球天氣系統中每個分子的位置和速度。這當然不可行，而天氣預報的不准確是一個很好的例子，它很難對天氣系統的行為作出粗略的估計。因此，從RANDOM.ORG預測亂數是不切實際的，即使是對一個威懾者來說也是如此。對於基於熔岩燈的亂數發生器，也可以採用類似情況（在不同比例上）。</p>
+<p>現在，你可能會認為，既然關於混沌現象是否適合產生隨機性存在爭議，那麼為什麼不堅持量子物理學呢？這似乎是安全的賭注。然而，量子發生器也不受批評。硬決定論者會聲稱亞原子粒子的行為並不是真正的隨機的，而是與大爆炸以來宇宙中其他一切事物完全一樣預先確定。我們認為這些特定粒子之所以隨機行為，僅僅是因為人類的測量無法解釋它們的行為。在這個觀點中，亞原子事件<em>確實有</em>先因，但我們只是不明白（尚未），因此事件對我們來說似乎是隨機的。對於一個難以阻止的人來說，量子物理學與大氣雜訊或熔岩燈一樣，完全適合亂數的生成。</p>
+<p>這只是一個可能的論點，還有很多其他論點。綜合一下，我認為最有意義的隨機的定義是，這是無法預測的人類。隨機性是否源于不可預測的天氣系統、熔岩燈還是亞原子粒子事件，這在很大程度上是學術性的。雖然量子亂數產生器當然可以生成真正的亂數，但在我看來，它們對於所有意圖和目的都等同于基於複雜動態系統的方法。</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E5%81%BD%E4%BA%82%E6%95%B8%E7%94%A2%E7%94%9F%E5%99%A8">偽亂數產生器</a></li>
+<li><a href="#%E7%9C%9F%E6%AD%A3%E7%9A%84%E4%BA%82%E6%95%B8%E7%94%A2%E7%94%9F%E5%99%A8">真正的亂數產生器</a></li>
+<li><a href="#%E9%87%8F%E5%AD%90%E4%BA%8B%E4%BB%B6%E9%82%84%E6%98%AF%E6%B7%B7%E6%B2%8C%E7%B3%BB%E7%B5%B1">量子事件還是混沌系統？</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://IsumiAlice.github.io/post/steam-yi-shu-zuo-pin-zhan-shi-lan-she-ding/">
+              <h3 class="post-title">
+                Steam 藝術作品展示欄設定
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://IsumiAlice.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

@@ -2,20 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://IsumiAlice.github.io</id>
     <title>死体的部落格</title>
-    <updated>2020-04-21T16:30:38.456Z</updated>
+    <updated>2020-05-04T13:14:35.034Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://IsumiAlice.github.io"/>
     <link rel="self" href="https://IsumiAlice.github.io/atom.xml"/>
     <logo>https://IsumiAlice.github.io/images/avatar.png</logo>
     <icon>https://IsumiAlice.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 死体的部落格</rights>
-    <entry>
-        <title type="html"><![CDATA[記録 Win10 遇到的各種坑坑]]></title>
-        <id>https://IsumiAlice.github.io/post/RHud701ar/</id>
-        <link href="https://IsumiAlice.github.io/post/RHud701ar/">
-        </link>
-        <updated>2020-04-21T15:42:33.000Z</updated>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Arm Performance Libraries 環境配置]]></title>
         <id>https://IsumiAlice.github.io/post/koJCJJ3ay/</id>
@@ -38,18 +31,46 @@
         <updated>2020-04-11T16:11:58.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[部落格搬家]]></title>
-        <id>https://IsumiAlice.github.io/post/hello-gridea/</id>
-        <link href="https://IsumiAlice.github.io/post/hello-gridea/">
+        <title type="html"><![CDATA[部落格 log]]></title>
+        <id>https://IsumiAlice.github.io/post/hegridea/</id>
+        <link href="https://IsumiAlice.github.io/post/hegridea/">
         </link>
         <updated>2020-04-10T12:06:24.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Raspberry 基礎配置]]></title>
-        <id>https://IsumiAlice.github.io/post/Ras-helloworld/</id>
-        <link href="https://IsumiAlice.github.io/post/Ras-helloworld/">
+        <title type="html"><![CDATA[Ray Tracing in a Weekend]]></title>
+        <id>https://IsumiAlice.github.io/post/NkOR8gf_w/</id>
+        <link href="https://IsumiAlice.github.io/post/NkOR8gf_w/">
         </link>
-        <updated>2020-02-29T14:26:49.000Z</updated>
+        <updated>2020-03-25T04:03:44.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用 Windows 時經常遇到的問題]]></title>
+        <id>https://IsumiAlice.github.io/post/RHud701ar/</id>
+        <link href="https://IsumiAlice.github.io/post/RHud701ar/">
+        </link>
+        <updated>2020-03-10T14:50:37.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Raspberry 配置 ASF]]></title>
+        <id>https://IsumiAlice.github.io/post/GcP6XkwG6/</id>
+        <link href="https://IsumiAlice.github.io/post/GcP6XkwG6/">
+        </link>
+        <updated>2020-03-04T12:10:48.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Raspberry 基礎配置]]></title>
+        <id>https://IsumiAlice.github.io/post/gWUxHc_Er/</id>
+        <link href="https://IsumiAlice.github.io/post/gWUxHc_Er/">
+        </link>
+        <updated>2020-02-29T14:26:47.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[隨機性和亂數]]></title>
+        <id>https://IsumiAlice.github.io/post/miVFuHvM6/</id>
+        <link href="https://IsumiAlice.github.io/post/miVFuHvM6/">
+        </link>
+        <updated>2020-02-03T16:13:23.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Steam 藝術作品展示欄設定]]></title>
@@ -57,26 +78,5 @@
         <link href="https://IsumiAlice.github.io/post/steam-yi-shu-zuo-pin-zhan-shi-lan-she-ding/">
         </link>
         <updated>2020-01-27T03:06:55.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[「四疊半神話大系」讀書筆記]]></title>
-        <id>https://IsumiAlice.github.io/post/si-die-ban-shen-hua-da-xi-du-shu-bi-ji/</id>
-        <link href="https://IsumiAlice.github.io/post/si-die-ban-shen-hua-da-xi-du-shu-bi-ji/">
-        </link>
-        <updated>2019-04-19T14:42:54.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python Cheatsheet]]></title>
-        <id>https://IsumiAlice.github.io/post/kaqdpD-RS/</id>
-        <link href="https://IsumiAlice.github.io/post/kaqdpD-RS/">
-        </link>
-        <updated>2019-04-04T12:10:06.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[柏拉圖多面體]]></title>
-        <id>https://IsumiAlice.github.io/post/bo-la-tu-duo-mian-ti/</id>
-        <link href="https://IsumiAlice.github.io/post/bo-la-tu-duo-mian-ti/">
-        </link>
-        <updated>2018-09-01T07:02:19.000Z</updated>
     </entry>
 </feed>

@@ -1,6 +1,8 @@
-<html>
-  <head>
-  <meta charset="utf-8" />
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>死体的部落格</title>
 <link rel="shortcut icon" href="https://IsumiAlice.github.io/favicon.ico?v=1588598069094">
@@ -11,11 +13,19 @@
 
 
 
-  <meta name="description" content="" />
-  </head>
-  <body>
-    <div class="main">
-      <div class="main-content">
+    <script src="//cdn.jsdelivr.net/gh/tangkaichuan/gridea-search/lib/fuse.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/tangkaichuan/gridea-search/lib/ejs.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/tangkaichuan/gridea-search/lib/gridea-search.min.js"></script>
+    <script src="/media/gridea-search/result-template.ejs" type="text/ejs"></script>
+</head>
+
+<body>
+    <style>
+        .searched-keyword {
+            background-color: yellow;
+        }
+    </style>
+    <div class="main animated">
         <div class="site-header">
   <a href="https://IsumiAlice.github.io">
   <img class="avatar" src="https://IsumiAlice.github.io/images/avatar.png?v=1588598069094" alt="">
@@ -72,45 +82,18 @@
   </div>
 </div>
 
-
-        <div class="tags-container">
-          
-            <a class="tag" href="https://IsumiAlice.github.io/tag/1S6grZsEF/">高效能運算</a>
-          
-            <a class="tag" href="https://IsumiAlice.github.io/tag/jBseUEYdhs/">數學</a>
-          
-            <a class="tag" href="https://IsumiAlice.github.io/tag/YPTPgmhWP/">科普</a>
-          
-            <a class="tag" href="https://IsumiAlice.github.io/tag/aHVqSEOpa/">圖形學</a>
-          
-            <a class="tag" href="https://IsumiAlice.github.io/tag/_9YY2XJjRJ/">光綫追蹤</a>
-          
-            <a class="tag" href="https://IsumiAlice.github.io/tag/D-SNsUuoT/">野生技術</a>
-          
-            <a class="tag" href="https://IsumiAlice.github.io/tag/_NCtRs6TN/">Steam</a>
-          
-            <a class="tag" href="https://IsumiAlice.github.io/tag/aUc7uTqPJ/">樹莓派</a>
-          
-            <a class="tag" href="https://IsumiAlice.github.io/tag/HOtKaeflp/">計算機</a>
-          
-            <a class="tag" href="https://IsumiAlice.github.io/tag/x0eg6Ssip/">遊戲</a>
-          
-            <a class="tag" href="https://IsumiAlice.github.io/tag/sHSZWBUUm/">Python</a>
-          
-            <a class="tag" href="https://IsumiAlice.github.io/tag/hxNB4jaOo/">演算法</a>
-          
-            <a class="tag" href="https://IsumiAlice.github.io/tag/Vtf8lkNaa/">讀書</a>
-          
+        <div id="gridea-search-result">
+            <p class="searching">搜索中......</p>
+            <p class="no-result" style="display:none">未搜索到相关文章</p>
         </div>
-
-        <div class="site-footer">
+    </div>
+    <div class="site-footer">
   Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
   <a class="rss" href="https://IsumiAlice.github.io/atom.xml" target="_blank">
     <i class="ri-rss-line"></i> RSS
   </a>
 </div>
 
-      </div>
-    </div>
-  </body>
+</body>
+
 </html>

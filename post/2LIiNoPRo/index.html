@@ -2,21 +2,28 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>康威生命遊戲 | 死体的部落格</title>
+<title>我在酒吧喝什麽 | 死体的部落格</title>
 <link rel="shortcut icon" href="https://IsumiAlice.github.io/favicon.ico?v=1588598069094">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://IsumiAlice.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="康威生命遊戲 | 死体的部落格 - Atom Feed" href="https://IsumiAlice.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="我在酒吧喝什麽 | 死体的部落格 - Atom Feed" href="https://IsumiAlice.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="
-2020.4.11，名為 Conway 的細胞沒有足夠多的鄰居，遺憾的退出了生命遊戲
+    <meta name="description" content="記録一些喝過的酒，話說好久沒去酒吧了
+伏特加基酒
 
-康威生命遊戲 Conway's Game of Life，又稱康威生命棋，是英國數學家約翰·何頓·康威在1970年發明的細胞自動機。
-接下來我將實現一..." />
-    <meta name="keywords" content="科普,數學" />
+黑俄羅斯 (伏特加、咖啡甜酒)
+螺絲起子 (伏特加、橙汁)
+柯夢波丹 (伏特加、白橙皮酒、蔓越莓汁)
+
+威士忌基酒
+
+威士忌酸 騷兒 (威士忌、萊姆汁)
+威可 (威士忌、可樂)
+古典鷄尾酒..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -82,56 +89,53 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              康威生命遊戲
+              我在酒吧喝什麽
             </h2>
             <div class="post-info">
               <span>
-                2020-04-17
+                2019-04-04
               </span>
               <span>
-                2 min read
+                1 min read
               </span>
-              
-                <a href="https://IsumiAlice.github.io/tag/YPTPgmhWP/" class="post-tag">
-                  # 科普
-                </a>
-              
-                <a href="https://IsumiAlice.github.io/tag/jBseUEYdhs/" class="post-tag">
-                  # 數學
-                </a>
               
             </div>
             
-              <img class="post-feature-image" src="https://raw.githubusercontent.com/IsumiAlice/IsumiPic/master/20200414225811.png" alt="">
+              <img class="post-feature-image" src="https://raw.githubusercontent.com/IsumiAlice/IsumiPic/master/20200109193021.png" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <blockquote>
-<p>2020.4.11，名為 <a href="https://zh.wikipedia.org/wiki/%E7%B4%84%E7%BF%B0%C2%B7%E4%BD%95%E9%A0%93%C2%B7%E5%BA%B7%E5%A8%81">Conway</a> 的細胞沒有足夠多的鄰居，遺憾的退出了生命遊戲</p>
-</blockquote>
-<p>康威生命遊戲 Conway's Game of Life，又稱康威生命棋，是英國數學家約翰·何頓·康威在1970年發明的細胞自動機。</p>
-<p>接下來我將實現一個簡單的康威生命遊戲，詳細的資料可以參考 <a href="https://zh.wikipedia.org/wiki/%E5%BA%B7%E5%A8%81%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F">wiki 頁面</a></p>
-<h2 id="規則">規則</h2>
-<p>生命遊戲中，對於任意細胞，規則如下：</p>
-<ul>
-<li>每個細胞有兩種狀態 - 存活或死亡，每個細胞與以自身為中心的周圍八格細胞產生互動（如圖，黑色為存活，白色為死亡）</li>
-<li>當前細胞為存活狀態時，當周圍的存活細胞低於2個時（不包含2個），該細胞變成死亡狀態。（模擬生命數量稀少）</li>
-<li>當前細胞為存活狀態時，當周圍有2個或3個存活細胞時，該細胞保持原樣。</li>
-<li>當前細胞為存活狀態時，當周圍有超過3個存活細胞時，該細胞變成死亡狀態。（模擬生命數量過多）</li>
-<li>當前細胞為死亡狀態時，當周圍有3個存活細胞時，該細胞變成存活狀態。（模擬繁殖）</li>
-</ul>
-<p>可以把最初的細胞結構定義為種子，當所有在種子中的細胞同時被以上規則處理後，可以得到第一代細胞圖。按規則繼續處理當前的細胞圖，可以得到下一代的細胞圖，周而復始。</p>
+                <p>記録一些喝過的酒，話說好久沒去酒吧了</p>
+<p>伏特加基酒</p>
+<ol>
+<li>黑俄羅斯 (伏特加、咖啡甜酒)</li>
+<li>螺絲起子 (伏特加、橙汁)</li>
+<li>柯夢波丹 (伏特加、白橙皮酒、蔓越莓汁)</li>
+</ol>
+<p>威士忌基酒</p>
+<ol>
+<li>威士忌酸 騷兒 (威士忌、萊姆汁)</li>
+<li>威可 (威士忌、可樂)</li>
+<li>古典鷄尾酒 Old Fashioned (威士忌、柑橘苦精、放糖、蘇打水)</li>
+</ol>
+<p>蘭姆酒基酒</p>
+<ol>
+<li>自由古巴 (蘭姆、可樂)</li>
+<li>莫吉托 mojito i不發音 (蘭姆、檸檬、薄荷葉、蘇打水、糖)</li>
+</ol>
+<p>白蘭地</p>
+<ol>
+<li>Side Car</li>
+</ol>
+<p>龍舌蘭</p>
+<ol>
+<li>日出</li>
+<li>瑪格麗特</li>
+</ol>
 
               </div>
               <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E8%A6%8F%E5%89%87">規則</a></li>
-</ul>
-</li>
-</ul>
-
+                
               </div>
             </div>
           </article>
@@ -140,9 +144,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://IsumiAlice.github.io/post/3zf3BZtNm/">
+            <a href="https://IsumiAlice.github.io/post/bo-la-tu-duo-mian-ti/">
               <h3 class="post-title">
-                物理學中的「四大神獸」
+                柏拉圖多面體
               </h3>
             </a>
           </div>

@@ -2,21 +2,19 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>康威生命遊戲 | 死体的部落格</title>
+<title>Raspberry 配置 ASF | 死体的部落格</title>
 <link rel="shortcut icon" href="https://IsumiAlice.github.io/favicon.ico?v=1588598069094">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://IsumiAlice.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="康威生命遊戲 | 死体的部落格 - Atom Feed" href="https://IsumiAlice.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Raspberry 配置 ASF | 死体的部落格 - Atom Feed" href="https://IsumiAlice.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="
-2020.4.11，名為 Conway 的細胞沒有足夠多的鄰居，遺憾的退出了生命遊戲
-
-康威生命遊戲 Conway's Game of Life，又稱康威生命棋，是英國數學家約翰·何頓·康威在1970年發明的細胞自動機。
-接下來我將實現一..." />
-    <meta name="keywords" content="科普,數學" />
+    <meta name="description" content="首先在國內網路下要保證配置好了代理服務 (參見之前的 Raspberry Hello)
+ASF Git 頁面: https://github.com/JustArchiNET/ArchiSteamFarm
+Setting up 頁面: ht..." />
+    <meta name="keywords" content="Steam,樹莓派" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -82,54 +80,57 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              康威生命遊戲
+              Raspberry 配置 ASF
             </h2>
             <div class="post-info">
               <span>
-                2020-04-17
+                2020-03-04
               </span>
               <span>
                 2 min read
               </span>
               
-                <a href="https://IsumiAlice.github.io/tag/YPTPgmhWP/" class="post-tag">
-                  # 科普
+                <a href="https://IsumiAlice.github.io/tag/_NCtRs6TN/" class="post-tag">
+                  # Steam
                 </a>
               
-                <a href="https://IsumiAlice.github.io/tag/jBseUEYdhs/" class="post-tag">
-                  # 數學
+                <a href="https://IsumiAlice.github.io/tag/aUc7uTqPJ/" class="post-tag">
+                  # 樹莓派
                 </a>
               
             </div>
             
-              <img class="post-feature-image" src="https://raw.githubusercontent.com/IsumiAlice/IsumiPic/master/20200414225811.png" alt="">
+              <img class="post-feature-image" src="https://raw.githubusercontent.com/IsumiAlice/IsumiPic/master/20200303213617.png" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <blockquote>
-<p>2020.4.11，名為 <a href="https://zh.wikipedia.org/wiki/%E7%B4%84%E7%BF%B0%C2%B7%E4%BD%95%E9%A0%93%C2%B7%E5%BA%B7%E5%A8%81">Conway</a> 的細胞沒有足夠多的鄰居，遺憾的退出了生命遊戲</p>
-</blockquote>
-<p>康威生命遊戲 Conway's Game of Life，又稱康威生命棋，是英國數學家約翰·何頓·康威在1970年發明的細胞自動機。</p>
-<p>接下來我將實現一個簡單的康威生命遊戲，詳細的資料可以參考 <a href="https://zh.wikipedia.org/wiki/%E5%BA%B7%E5%A8%81%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F">wiki 頁面</a></p>
-<h2 id="規則">規則</h2>
-<p>生命遊戲中，對於任意細胞，規則如下：</p>
+                <p>首先在國內網路下要保證配置好了代理服務 (參見之前的 Raspberry Hello)</p>
+<p>ASF Git 頁面: https://github.com/JustArchiNET/ArchiSteamFarm</p>
+<p>Setting up 頁面: https://github.com/JustArchiNET/ArchiSteamFarm/wiki/Setting-up-zh-CN</p>
+<p>在 release 頁面下載相應壓縮檔, 一般來說選 linux-arm</p>
+<h1 id="安裝相關依賴">安裝相關依賴</h1>
+<p>套件名稱取決於您正在使用的 Linux 發行版，我們已經列出了最常見的套件。 您可以使用本地套件管理系統，為您的作業系統取得全部套件（例如 Debian 的 <code>apt</code> 或 CentOS 的 <code>yum</code>）。</p>
 <ul>
-<li>每個細胞有兩種狀態 - 存活或死亡，每個細胞與以自身為中心的周圍八格細胞產生互動（如圖，黑色為存活，白色為死亡）</li>
-<li>當前細胞為存活狀態時，當周圍的存活細胞低於2個時（不包含2個），該細胞變成死亡狀態。（模擬生命數量稀少）</li>
-<li>當前細胞為存活狀態時，當周圍有2個或3個存活細胞時，該細胞保持原樣。</li>
-<li>當前細胞為存活狀態時，當周圍有超過3個存活細胞時，該細胞變成死亡狀態。（模擬生命數量過多）</li>
-<li>當前細胞為死亡狀態時，當周圍有3個存活細胞時，該細胞變成存活狀態。（模擬繁殖）</li>
+<li><code>libcurl</code>（<code>libcurl4</code>、<code>libcurl3</code>）</li>
+<li><code>libicu</code>（您的 Linux 發行版的最新版本，例如 <code>libicu60</code>）</li>
+<li><code>libkrb5-3</code>（<code>krb5-libs</code>）</li>
+<li><code>liblttng-ust0</code>（<code>lttng-ust</code>）</li>
+<li><code>libssl</code>（<code>libssl1.1</code>、<code>openssl-libs</code>、您的 Linux 發行版最新的 1.1.X 版本）</li>
+<li><code>zlib1g</code>（<code>zlib</code>）</li>
 </ul>
-<p>可以把最初的細胞結構定義為種子，當所有在種子中的細胞同時被以上規則處理後，可以得到第一代細胞圖。按規則繼續處理當前的細胞圖，可以得到下一代的細胞圖，周而復始。</p>
+<p>其中至少應該有幾個套件已經可用於您的系統本地了（例如現今幾乎每一個 Linux 發行版都需要 <code>zlib1g</code>）。</p>
+<h1 id="配置">配置</h1>
+<p>在 <strong><a href="https://justarchinet.github.io/ASF-WebConfigGenerator">網頁設定檔產生器</a></strong> 頁面配置一個 ASF 和一個 Bot</p>
+<p>然後放入 config 資料夾中</p>
+<p>修改權限 <code>chmod +x ArchiSteamFarm</code></p>
+<p>然後 <code>./ArchiSteamFarm</code> 執行</p>
+<p>若需要代理則在前面添加 <code>proxychains</code></p>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E8%A6%8F%E5%89%87">規則</a></li>
-</ul>
-</li>
+<li><a href="#%E5%AE%89%E8%A3%9D%E7%9B%B8%E9%97%9C%E4%BE%9D%E8%B3%B4">安裝相關依賴</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE">配置</a></li>
 </ul>
 
               </div>
@@ -140,9 +141,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://IsumiAlice.github.io/post/3zf3BZtNm/">
+            <a href="https://IsumiAlice.github.io/post/gWUxHc_Er/">
               <h3 class="post-title">
-                物理學中的「四大神獸」
+                Raspberry 基礎配置
               </h3>
             </a>
           </div>
