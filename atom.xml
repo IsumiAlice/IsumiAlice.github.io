@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://IsumiAlice.github.io</id>
     <title>死体的部落格</title>
-    <updated>2020-05-04T13:14:35.034Z</updated>
+    <updated>2020-05-15T12:53:23.766Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://IsumiAlice.github.io"/>
     <link rel="self" href="https://IsumiAlice.github.io/atom.xml"/>
@@ -74,8 +74,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Steam 藝術作品展示欄設定]]></title>
-        <id>https://IsumiAlice.github.io/post/steam-yi-shu-zuo-pin-zhan-shi-lan-she-ding/</id>
-        <link href="https://IsumiAlice.github.io/post/steam-yi-shu-zuo-pin-zhan-shi-lan-she-ding/">
+        <id>https://IsumiAlice.github.io/post/SYszPz/</id>
+        <link href="https://IsumiAlice.github.io/post/SYszPz/">
         </link>
         <updated>2020-01-27T03:06:55.000Z</updated>
     </entry>
