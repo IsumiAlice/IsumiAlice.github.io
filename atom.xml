@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>死体的部落格</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="/"/>
+  <updated>2020-06-16T15:44:39.289Z</updated>
+  <id>/</id>
+  
+  <author>
+    <name>死体菌</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Arm PL 環境配置</title>
+    <link href="/2020/04/19/Arm-PL/"/>
+    <id>/2020/04/19/Arm-PL/</id>
+    <published>2020-04-19T13:51:50.000Z</published>
+    <updated>2020-06-16T15:44:39.289Z</updated>
+    
+    <summary type="html">
+    
+      Arm Performance Libraries 環境配置
+    
+    </summary>
+    
+      <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+      <category term="高效能運算" scheme="/tags/%E9%AB%98%E6%95%88%E8%83%BD%E9%81%8B%E7%AE%97/"/>
+    
+      <category term="數學" scheme="/tags/%E6%95%B8%E5%AD%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 Windows 時經常遇到的問題</title>
+    <link href="/2020/03/10/RHud701ar/"/>
+    <id>/2020/03/10/RHud701ar/</id>
+    <published>2020-03-10T14:50:37.000Z</published>
+    <updated>2020-06-16T15:58:53.157Z</updated>
+    
+    <summary type="html">
+    
+      Raspberry 基礎配置
+    
+    </summary>
+    
+      <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+      <category term="計算機" scheme="/tags/%E8%A8%88%E7%AE%97%E6%A9%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Raspberry 配置 ASF</title>
+    <link href="/2020/03/04/Raspberry-ASF/"/>
+    <id>/2020/03/04/Raspberry-ASF/</id>
+    <published>2020-03-04T12:10:48.000Z</published>
+    <updated>2020-06-16T15:39:58.021Z</updated>
+    
+    <summary type="html">
+    
+      Raspberry 配置 ASF
+    
+    </summary>
+    
+      <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+      <category term="樹莓派" scheme="/tags/%E6%A8%B9%E8%8E%93%E6%B4%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Raspberry 基礎配置</title>
+    <link href="/2020/02/29/Raspberry-hello/"/>
+    <id>/2020/02/29/Raspberry-hello/</id>
+    <published>2020-02-29T14:26:47.000Z</published>
+    <updated>2020-06-16T15:42:13.639Z</updated>
+    
+    <summary type="html">
+    
+      Raspberry 基礎配置
+    
+    </summary>
+    
+      <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+      <category term="樹莓派" scheme="/tags/%E6%A8%B9%E8%8E%93%E6%B4%BE/"/>
+    
+      <category term="計算機" scheme="/tags/%E8%A8%88%E7%AE%97%E6%A9%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Steam 藝術作品展示欄設定</title>
+    <link href="/2020/01/27/Steam-bg/"/>
+    <id>/2020/01/27/Steam-bg/</id>
+    <published>2020-01-27T03:06:55.000Z</published>
+    <updated>2020-06-16T15:55:04.709Z</updated>
+    
+    <summary type="html">
+    
+      Raspberry 基礎配置
+    
+    </summary>
+    
+      <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+      <category term="遊戲" scheme="/tags/%E9%81%8A%E6%88%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-Theme-Sakura</title>
+    <link href="/2018/12/12/Hexo-Theme-Sakura/"/>
+    <id>/2018/12/12/Hexo-Theme-Sakura/</id>
+    <published>2018-12-12T14:16:01.000Z</published>
+    <updated>2020-06-16T15:23:15.792Z</updated>
+    
+    <summary type="html">
+    
+      hexo-sakura主题使用教程
+    
+    </summary>
+    
+      <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="悅讀" scheme="/tags/%E6%82%85%E8%AE%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一道情人節的密碼題</title>
+    <link href="/2018/08/17/Valentine-pw/"/>
+    <id>/2018/08/17/Valentine-pw/</id>
+    <published>2018-08-17T11:18:12.000Z</published>
+    <updated>2020-06-16T15:57:34.030Z</updated>
+    
+    <summary type="html">
+    
+      Raspberry 基礎配置
+    
+    </summary>
+    
+      <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>使用 youtube-dl 下載影片</title>
+    <link href="/2018/02/17/youtube-dl/"/>
+    <id>/2018/02/17/youtube-dl/</id>
+    <published>2018-02-17T01:34:04.000Z</published>
+    <updated>2020-06-16T15:58:06.145Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;youtube-dl常用命令&quot;&gt;&lt;a href=&quot;#youtube-dl常用命令&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+      <category term="計算機" scheme="/tags/%E8%A8%88%E7%AE%97%E6%A9%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基於 Hexo 搭建個人靜態部落格</title>
+    <link href="/2018/01/29/hello-hexo/"/>
+    <id>/2018/01/29/hello-hexo/</id>
+    <published>2018-01-29T03:00:18.000Z</published>
+    <updated>2020-06-16T15:37:36.817Z</updated>
+    
+    <summary type="html">
+    
+      基於 Hexo 搭建個人靜態部落格
+    
+    </summary>
+    
+      <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+  </entry>
+  
+</feed>
