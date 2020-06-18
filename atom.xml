@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-06-16T15:44:39.289Z</updated>
+  <updated>2020-06-18T16:22:14.617Z</updated>
   <id>/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="/2020/04/19/Arm-PL/"/>
     <id>/2020/04/19/Arm-PL/</id>
     <published>2020-04-19T13:51:50.000Z</published>
-    <updated>2020-06-16T15:44:39.289Z</updated>
+    <updated>2020-06-18T16:22:14.617Z</updated>
     
     <summary type="html">
     
@@ -32,22 +32,22 @@
       <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
     
     
-      <category term="高效能運算" scheme="/tags/%E9%AB%98%E6%95%88%E8%83%BD%E9%81%8B%E7%AE%97/"/>
-    
       <category term="數學" scheme="/tags/%E6%95%B8%E5%AD%B8/"/>
+    
+      <category term="高效能運算" scheme="/tags/%E9%AB%98%E6%95%88%E8%83%BD%E9%81%8B%E7%AE%97/"/>
     
   </entry>
   
   <entry>
     <title>使用 Windows 時經常遇到的問題</title>
-    <link href="/2020/03/10/RHud701ar/"/>
-    <id>/2020/03/10/RHud701ar/</id>
+    <link href="/2020/03/10/Windows-puu/"/>
+    <id>/2020/03/10/Windows-puu/</id>
     <published>2020-03-10T14:50:37.000Z</published>
-    <updated>2020-06-16T15:58:53.157Z</updated>
+    <updated>2020-06-18T16:23:14.305Z</updated>
     
     <summary type="html">
     
-      Raspberry 基礎配置
+      使用 Windows 時經常遇到的問題
     
     </summary>
     
@@ -105,11 +105,11 @@
     <link href="/2020/01/27/Steam-bg/"/>
     <id>/2020/01/27/Steam-bg/</id>
     <published>2020-01-27T03:06:55.000Z</published>
-    <updated>2020-06-16T15:55:04.709Z</updated>
+    <updated>2020-06-18T16:23:30.741Z</updated>
     
     <summary type="html">
     
-      Raspberry 基礎配置
+      Steam 藝術作品展示欄設定
     
     </summary>
     
@@ -147,11 +147,11 @@
     <link href="/2018/08/17/Valentine-pw/"/>
     <id>/2018/08/17/Valentine-pw/</id>
     <published>2018-08-17T11:18:12.000Z</published>
-    <updated>2020-06-16T15:57:34.030Z</updated>
+    <updated>2020-06-18T16:23:49.425Z</updated>
     
     <summary type="html">
     
-      Raspberry 基礎配置
+      今天是七夕呢，寫這個的起因是一個同學的女朋友發了個密碼解密給他。
     
     </summary>
     
@@ -165,7 +165,7 @@
     <link href="/2018/02/17/youtube-dl/"/>
     <id>/2018/02/17/youtube-dl/</id>
     <published>2018-02-17T01:34:04.000Z</published>
-    <updated>2020-06-16T15:58:06.145Z</updated>
+    <updated>2020-06-18T16:23:55.271Z</updated>
     
     <summary type="html">
     
