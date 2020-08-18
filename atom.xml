@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-06-18T16:22:14.617Z</updated>
+  <updated>2020-08-18T15:19:13.467Z</updated>
   <id>/</id>
   
   <author>
@@ -21,11 +21,18 @@
     <link href="/2020/04/19/Arm-PL/"/>
     <id>/2020/04/19/Arm-PL/</id>
     <published>2020-04-19T13:51:50.000Z</published>
-    <updated>2020-06-18T16:22:14.617Z</updated>
+    <updated>2020-08-18T15:19:13.467Z</updated>
     
     <summary type="html">
     
-      Arm Performance Libraries 環境配置
+      
+      
+        
+        
+          &lt;p&gt;Arm Performance Libraries 作為 Linux 的 Arm Compiler 的一部分安裝，並且需要 Arm Allinea Studio 許可證&lt;/p&gt;
+&lt;h2 id=&quot;License&quot;&gt;&lt;a href=&quot;#License&quot;
+        
+      
     
     </summary>
     
@@ -43,7 +50,7 @@
     <link href="/2020/03/10/Windows-puu/"/>
     <id>/2020/03/10/Windows-puu/</id>
     <published>2020-03-10T14:50:37.000Z</published>
-    <updated>2020-06-18T16:23:14.305Z</updated>
+    <updated>2020-08-18T15:20:22.592Z</updated>
     
     <summary type="html">
     
@@ -63,7 +70,7 @@
     <link href="/2020/03/04/Raspberry-ASF/"/>
     <id>/2020/03/04/Raspberry-ASF/</id>
     <published>2020-03-04T12:10:48.000Z</published>
-    <updated>2020-06-16T15:39:58.021Z</updated>
+    <updated>2020-08-18T15:19:55.351Z</updated>
     
     <summary type="html">
     
@@ -83,7 +90,7 @@
     <link href="/2020/02/29/Raspberry-hello/"/>
     <id>/2020/02/29/Raspberry-hello/</id>
     <published>2020-02-29T14:26:47.000Z</published>
-    <updated>2020-06-16T15:42:13.639Z</updated>
+    <updated>2020-08-18T15:20:01.145Z</updated>
     
     <summary type="html">
     
@@ -105,7 +112,7 @@
     <link href="/2020/01/27/Steam-bg/"/>
     <id>/2020/01/27/Steam-bg/</id>
     <published>2020-01-27T03:06:55.000Z</published>
-    <updated>2020-06-18T16:23:30.741Z</updated>
+    <updated>2020-08-18T15:20:07.162Z</updated>
     
     <summary type="html">
     
@@ -121,33 +128,11 @@
   </entry>
   
   <entry>
-    <title>Hexo-Theme-Sakura</title>
-    <link href="/2018/12/12/Hexo-Theme-Sakura/"/>
-    <id>/2018/12/12/Hexo-Theme-Sakura/</id>
-    <published>2018-12-12T14:16:01.000Z</published>
-    <updated>2020-06-16T15:23:15.792Z</updated>
-    
-    <summary type="html">
-    
-      hexo-sakura主题使用教程
-    
-    </summary>
-    
-      <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
-    
-    
-      <category term="web" scheme="/tags/web/"/>
-    
-      <category term="悅讀" scheme="/tags/%E6%82%85%E8%AE%80/"/>
-    
-  </entry>
-  
-  <entry>
     <title>一道情人節的密碼題</title>
     <link href="/2018/08/17/Valentine-pw/"/>
     <id>/2018/08/17/Valentine-pw/</id>
     <published>2018-08-17T11:18:12.000Z</published>
-    <updated>2020-06-18T16:23:49.425Z</updated>
+    <updated>2020-08-18T15:20:13.643Z</updated>
     
     <summary type="html">
     
@@ -165,7 +150,7 @@
     <link href="/2018/02/17/youtube-dl/"/>
     <id>/2018/02/17/youtube-dl/</id>
     <published>2018-02-17T01:34:04.000Z</published>
-    <updated>2020-06-18T16:23:55.271Z</updated>
+    <updated>2020-08-18T15:20:26.636Z</updated>
     
     <summary type="html">
     
@@ -191,11 +176,17 @@
     <link href="/2018/01/29/hello-hexo/"/>
     <id>/2018/01/29/hello-hexo/</id>
     <published>2018-01-29T03:00:18.000Z</published>
-    <updated>2020-06-16T15:37:36.817Z</updated>
+    <updated>2020-08-18T15:18:45.828Z</updated>
     
     <summary type="html">
     
-      基於 Hexo 搭建個人靜態部落格
+      
+      
+        
+        
+          &lt;h2 id=&quot;安裝&quot;&gt;&lt;a href=&quot;#安裝&quot; class=&quot;headerlink&quot; title=&quot;安裝&quot;&gt;&lt;/a&gt;安裝&lt;/h2&gt;&lt;p&gt;安裝&lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot;
+        
+      
     
     </summary>
     
