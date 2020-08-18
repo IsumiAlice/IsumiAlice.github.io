@@ -9,7 +9,7 @@ tags:
  - 樹莓派
 keywords: Raspberry
 description: Raspberry 配置 ASF
-photos:  https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204625.jpg
+cover: https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204625.jpg
 ---
 首先在國內網路下要保證配置好了代理服務 (參見之前的 Raspberry Hello)
 

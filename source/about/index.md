@@ -1,10 +1,7 @@
 ---
 title: about me
 date: 2020-6-16 23:27:43
-keywords: 我
-description: 
-comments: false
-photos: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/about.jpg
+cover: https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204633.jpg
 ---
 
 
@@ -12,7 +9,7 @@ photos: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/about.jpg
 
 會許多數學的計算機碩士
 
-圖形學, 高性能計算, 基礎數學, 機器學習
+圖形學, 高效能運算, 基礎數學, 機器學習
 
 目前在深圳划水
 
@@ -31,6 +28,11 @@ QQ：1261492496
 ---
 
 ### 部落格大事記
+
+**2020-8-18**
+
+將原程式碼上傳到 source 分支
+由於大部分技術內容都放到 yuque 上了，這個部落格以後就發些胡言亂語吧
 
 **2020-6-17**
 

@@ -9,7 +9,7 @@ tags:
  - 遊戲
 keywords: Steam
 description: Steam 藝術作品展示欄設定
-photos:  https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204625.jpg
+cover:  https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204625.jpg
 ---
 ## 分割個人資料背景
 

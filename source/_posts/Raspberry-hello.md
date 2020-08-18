@@ -10,7 +10,7 @@ tags:
  - 計算機
 keywords: Raspberry
 description: Raspberry 基礎配置
-photos:  https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204625.jpg
+cover:  https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204625.jpg
 ---
 
 

@@ -1,15 +1,12 @@
 ---
 title: 基於 Hexo 搭建個人靜態部落格
 author: 死体菌
-avatar: https://gitee.com/IsumiAlice/IsumiPic/raw/master/2005/20200616222058.jpg
-categories: 技術
+categories: 
+ - 技術
 date: 2018-01-29 11:00:18
-comments: true
 tags: 
  - web
-keywords: Hexo
-description: 基於 Hexo 搭建個人靜態部落格
-photos:  https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204625.jpg
+cover: https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204625.jpg
 ---
 
 

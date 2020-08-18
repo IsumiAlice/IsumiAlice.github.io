@@ -9,7 +9,7 @@ tags:
  - 計算機
 keywords: Windows
 description: 使用 Windows 時經常遇到的問題
-photos:  https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204625.jpg
+cover:  https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204625.jpg
 ---
 ## 更換主機板
 

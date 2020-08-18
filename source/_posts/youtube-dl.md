@@ -9,7 +9,7 @@ tags:
  - 計算機
 keywords: youtube
 description:
-photos:  https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204625.jpg
+cover:  https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204625.jpg
 ---
 ## youtube-dl常用命令
 得到視頻可下載格式列表：

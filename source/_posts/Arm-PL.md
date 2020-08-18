@@ -1,16 +1,12 @@
 ---
 title: Arm PL 環境配置
-author: 死体菌
-avatar: https://gitee.com/IsumiAlice/IsumiPic/raw/master/2005/20200616222058.jpg
-categories: 技術
 date: 2020-04-19 21:51:50
-comments: true
+categories: 
+ - 技術
 tags: 
  - 數學
  - 高效能運算
-keywords: Hexo
-description: Arm Performance Libraries 環境配置
-photos:  https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204625.jpg
+cover: https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204625.jpg
 ---
 Arm Performance Libraries 作為 Linux 的 Arm Compiler 的一部分安裝，並且需要 Arm Allinea Studio 許可證
 

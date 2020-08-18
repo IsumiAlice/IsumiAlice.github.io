@@ -8,7 +8,7 @@ comments: true
 tags: 
 keywords: 密碼
 description: 今天是七夕呢，寫這個的起因是一個同學的女朋友發了個密碼解密給他。
-photos:  https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204625.jpg
+cover: https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204625.jpg
 ---
 ## 七夕快樂哦
 今天是七夕呢，寫這個的起因是一個同學的女朋友發了個密碼解密給他。
