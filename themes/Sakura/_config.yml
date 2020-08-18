@@ -1,0 +1,121 @@
+# site name
+prefixName: 砂糖菓子の
+siteName: 死体
+# favicon and site master avatar
+favicon: https://gitee.com/IsumiAlice/IsumiPic/raw/master/2005/20200616222643.jpg
+avatar: https://gitee.com/IsumiAlice/IsumiPic/raw/master/2005/20200616222058.jpg
+url: https://isumialice.github.io/
+description: 我很可愛，請給我錢
+cdn: # https://cdn.jsdelivr.net/gh/honjun/cdn@1.6
+pjax: 1
+# 1开启
+mathjax: 0
+
+notice: 恢復使用 Hexo 靜態頁面
+lazyloadImg:  https://gitee.com/IsumiAlice/IsumiPic/raw/master/2005/20200616222903.svg
+# https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg
+
+menus:
+  首頁: { path: /, fa: fa-fort-awesome faa-shake }
+  歸檔: { path: /archives, fa: fa-archive faa-shake, submenus: { 
+    技術: {path: /categories/技術/, fa: fa-code }, 
+    生活: {path: /categories/生活/, fa: fa-file-text-o }, 
+    資源: {path: /categories/資源/, fa: fa-cloud-download }, 
+    隨想: {path: /categories/隨想/, fa: fa-commenting-o }
+    # 转载: {path: /categories/转载/, fa: fa-book }
+  } }
+  清單: { path: javascript:;, fa: fa-list-ul faa-vertical, submenus: { 
+    書單: {path: /tags/悅讀/, fa: fa-th-list faa-bounce }, 
+    番組: {path: /bangumi/, fa: fa-film faa-vertical },
+    遊戲: {path: /game/, fa: fa-list-ul}
+    # 歌單: {path: /music/, fa: fa-headphones },
+    # 圖集: {path: /tags/圖集/, fa: fa-photo }
+  } }
+  # 留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }
+  # 友人帐: { path: /links/, fa: fa-link faa-shake }
+  # 赞赏: { path: /donate/, fa: fa-heart faa-pulse }
+  关于: { path: /, fa: fa-leaf faa-wrench , submenus: { 
+    我？: {path: /about/, fa: fa-meetup}, 
+    主题: {path: /theme-sakura/, fa: iconfont icon-sakura },
+    # Lab: {path: /lab/, fa: fa-cogs },
+  } }
+  # 客户端: { path: /client/, fa: fa-android faa-vertical }
+  # RSS: { path: /atom.xml, fa: fa-rss faa-pulse }
+
+
+# Home page sort type: -1: newer first，1: older first.
+homePageSortType: -1
+# Home page article shown number)
+homeArticleShown: 10
+# 背景图片 更好的修改
+bg:
+  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(1).jpg.webp
+  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(2).jpg.webp
+  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(3).jpg.webp
+  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(4).jpg.webp
+  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(5).jpg.webp
+  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(6).jpg.webp
+  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(7).jpg.webp
+  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(8).jpg.webp
+
+# 背景图片样式 空 原图效果 filter-dim 阴影 filter-grid 横条 filter-dot 点点
+bgclass: filter-dot
+
+# startdash url, title, desc img
+# todo
+startdash:
+  - {url: https://www.yuque.com/isumiai, title: Yuque , desc: 個人知識庫 , img:  https://gitee.com/IsumiAlice/IsumiPic/raw/master/2005/20200617211624.jpg}
+  - {url: https://www.zhihu.com/people/DeadBody, title: Zhihu, desc: 知乎個人頁面, img:  https://gitee.com/IsumiAlice/IsumiPic/raw/master/2005/20200617211813.jpg}
+  - {url: https://www.douban.com/people/IsumiAI/, title: Douban, desc: 豆瓣個人頁面, img:  https://gitee.com/IsumiAlice/IsumiPic/raw/master/2005/20200617211959.jpg}
+
+
+
+# your site build time or founded date
+siteBuildingTime: 06/16/2020
+
+#social  url, img PC端配置
+social:
+  github: {url: https://github.com/IsumiAlice, img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/github.png}
+  # sina: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/sina.png}
+  # wangyiyun: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/wangyiyun.png}
+  zhihu: {url: https://www.zhihu.com/people/DeadBody/posts, img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/zhihu.png}
+  # email: {url: http://weibo.com/mashirozx?is_all=1, img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/email.svg}
+  # wechat: {url: /#, qrcode: /img/custom/wechat.jpg, img: /img/social/wechat.png}
+  # wechat2: {url: /#, qrcode: /img/custom/wechat.jpg, img: /img/social/wechat.png}
+
+#social  url, img 移动端配置
+msocial:
+  github: {url: https://github.com/IsumiAlice, fa: fa-github, color: 333}
+  # weibo: {url: http://weibo.com/mashirozx?is_all=1, fa: fa-weibo, color: dd4b39}
+  # qq: {url: https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes, fa: fa-qq, color: 25c6fe}
+
+donate:
+  # paypal: https://www.paypal.me/hojuncn
+  alipay:  https://gitee.com/IsumiAlice/IsumiPic/raw/master/2005/alipay.png
+  wechat:  https://gitee.com/IsumiAlice/IsumiPic/raw/master/2005/wechat.png
+  wechatSQ: https://gitee.com/IsumiAlice/IsumiPic/raw/master/2005/wechat.png
+
+# 视频地址为https://cdn.jsdelivr.net/gh/honjun/hojun@1.2/Unbroken.mp4，配置如下
+# todo 想個辦法幹掉這個東西
+movies:
+  url: https://cdn.jsdelivr.net/gh/honjun/hojun@1.2
+  # 多个视频用逗号隔开，随机获取。支持的格式目前已知MP4,Flv。其他的可以试下，不保证有用
+  name: Unbroken.mp4
+
+aplayer: 
+  id: 2660651585
+  server: netease
+  type: playlist
+  fixed: true
+  autoplay: false
+  loop: all
+  order: random
+  preload: auto
+  volume: 0.7
+  mutex: true
+
+# Valine 评论配置 https://www.leancloud.cn/
+valine: false
+v_appId:
+v_appKey: 
+
