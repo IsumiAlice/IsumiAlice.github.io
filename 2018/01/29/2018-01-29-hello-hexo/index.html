@@ -1,0 +1,616 @@
+
+
+<!DOCTYPE html>
+<html lang="ja" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/logo.png">
+  <link rel="icon" type="image/png" href="/img/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="裝作鹹魚的鹹魚">
+  <meta name="author" content="死体">
+  <meta name="keywords" content>
+  <title>基於 Hexo 搭建個人靜態部落格 - 雀の涙</title>
+
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+  <link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css">
+  <link rel="stylesheet" href="/lib/hint/hint.min.css">
+
+  
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css">
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_2022741_rr5clgnx60r.css">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script src="/js/utils.js"></script>
+  <script src="/js/color-schema.js"></script>
+</head>
+
+
+<body>
+  <header style="height: 80vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>雀の涙</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                ホーム
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                アーカイブ
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                カテゴリー
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                タグ
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                本ブログ情報　
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204647.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2018-01-29 11:00" pubdate>
+      2018-01-29 11:00:18
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      447 文字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      7
+       分
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">基於 Hexo 搭建個人靜態部落格</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>本站搭建過程（已過氣）<br><a id="more"></a></p>
+<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>安裝<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a><br>更換爲國內源，安裝 cnpm</p>
+<pre><code class="hljs undefined"><span class="hljs-symbol">$</span> npm config <span class="hljs-keyword">set</span> registry <span class="hljs-comment">https:</span>//<span class="hljs-comment">registry.npm.taobao.org</span>
+$ npm <span class="hljs-comment">config get registry</span>
+
+$ npm <span class="hljs-comment">install -g cnpm</span>
+$ cmpm <span class="hljs-comment">install hexo</span></code></pre>
+<p>安裝<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git</a><br>安裝<a href="https://hexo.io/zh-tw/" target="_blank" rel="noopener">Hexo</a><br><pre><code class="hljs bash">$ npm install -g hexo-cli</code></pre></p>
+<h2 id="建立"><a href="#建立" class="headerlink" title="建立"></a>建立</h2><p>一旦 Hexo 完成後，請執行下列指令，Hexo 會在指定資料夾中建立所有您需要的檔案。<br><pre><code class="hljs bash">$ hexo init blog
+$ <span class="hljs-built_in">cd</span> blog
+$ npm install</code></pre></p>
+<h3 id="建立一篇新的文章"><a href="#建立一篇新的文章" class="headerlink" title="建立一篇新的文章"></a>建立一篇新的文章</h3><pre><code class="hljs bash">$ hexo new [layout] &lt;title&gt;</code></pre>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>佈局</th>
+<th>路徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>post</td>
+<td>source/_posts</td>
+</tr>
+<tr>
+<td>page</td>
+<td>source</td>
+</tr>
+<tr>
+<td>draft</td>
+<td>source/_drafts</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="產生靜態檔案"><a href="#產生靜態檔案" class="headerlink" title="產生靜態檔案"></a>產生靜態檔案</h3><pre><code class="hljs bash">$ hexo generate</code></pre>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>選項</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-d, —deploy</td>
+<td>產生完成即部署網站</td>
+</tr>
+<tr>
+<td>-w, —watch</td>
+<td>監看檔案變更</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="啟動伺服器"><a href="#啟動伺服器" class="headerlink" title="啟動伺服器"></a>啟動伺服器</h3><p>預設為 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a><br><pre><code class="hljs bash">$ hexo server</code></pre></p>
+<h3 id="部署網站到Git"><a href="#部署網站到Git" class="headerlink" title="部署網站到Git"></a>部署網站到Git</h3><p>可以直接使用git命令部署，將 <code>public</code> 資料夾裏的文件複製到git目錄下，之後使用 <code>git commit</code><br><pre><code class="hljs bash">$ hexo generate
+
+$ git add .
+$ git commit -m <span class="hljs-string">"update"</span>
+$ git push origin master</code></pre></p>
+<h3 id="Clean"><a href="#Clean" class="headerlink" title="Clean"></a>Clean</h3><pre><code class="hljs bash">$ hexo clean</code></pre>
+<h3 id="列出網站資料"><a href="#列出網站資料" class="headerlink" title="列出網站資料"></a>列出網站資料</h3><pre><code class="hljs bash">$ hexo list &lt;<span class="hljs-built_in">type</span>&gt;</code></pre>
+<h3 id="顯示版本咨詢"><a href="#顯示版本咨詢" class="headerlink" title="顯示版本咨詢"></a>顯示版本咨詢</h3><pre><code class="hljs bash">$ hexo version</code></pre>
+<h2 id="更換主題"><a href="#更換主題" class="headerlink" title="更換主題"></a>更換主題</h2><p>在 <code>themes</code> 資料夾內，新增一個資料夾，並修改 <code>_config.yml</code> 內的 <code>theme</code> 設定，即可切換主題</p>
+<h2 id="渲染公式"><a href="#渲染公式" class="headerlink" title="渲染公式"></a>渲染公式</h2><p>更換 markdown 渲染引擎</p>
+<pre><code class="hljs undefined">npm <span class="hljs-keyword">uninstall</span> hexo-renderer-marked <span class="hljs-comment">--save</span>
+npm <span class="hljs-keyword">install</span> hexo-renderer-kramed <span class="hljs-comment">--save</span></code></pre>
+<p>修改 node_modules/kramed/lib/rules/inline.js</p>
+<p>注意註釋部分</p>
+<pre><code class="hljs undefined">var inline = &#123;
+  // escape: /^<span class="hljs-symbol">\\</span>([<span class="hljs-symbol">\\</span>`*&#123;&#125;<span class="hljs-symbol">\[</span><span class="hljs-symbol">\]</span>()#$+<span class="hljs-symbol">\-</span>.!_&gt;])/,
+  escape: /^<span class="hljs-symbol">\\</span>([`*<span class="hljs-symbol">\[</span><span class="hljs-symbol">\]</span>()#$+<span class="hljs-symbol">\-</span>.!_&gt;])/,
+  autolink: /^&lt;([^ &gt;]+(@|:<span class="hljs-symbol">\/</span>)[^ &gt;]+)&gt;/,
+  url: noop,
+  html: /^&lt;!--[<span class="hljs-symbol">\s</span><span class="hljs-symbol">\S</span>]*?--&gt;|^&lt;(<span class="hljs-symbol">\w</span>+(?!:<span class="hljs-symbol">\/</span>|[^<span class="hljs-symbol">\w</span><span class="hljs-symbol">\s</span>@]*@)<span class="hljs-symbol">\b</span>)*?(?:"[^"]*"|'[^']*'|[^'"&gt;])*?&gt;([<span class="hljs-symbol">\s</span><span class="hljs-symbol">\S</span>]*?)?&lt;<span class="hljs-symbol">\/</span><span class="hljs-symbol">\1</span>&gt;|^&lt;(<span class="hljs-symbol">\w</span>+(?!:<span class="hljs-symbol">\/</span>|[^<span class="hljs-symbol">\w</span><span class="hljs-symbol">\s</span>@]*@)<span class="hljs-symbol">\b</span>)(?:"[^"]*"|'[^']*'|[^'"&gt;])*?&gt;/,
+  link: /^!?<span class="hljs-symbol">\[</span>(inside)<span class="hljs-symbol">\]</span><span class="hljs-symbol">\(</span>href<span class="hljs-symbol">\)</span>/,
+  reflink: /^!?<span class="hljs-symbol">\[</span>(inside)<span class="hljs-symbol">\]</span><span class="hljs-symbol">\s</span>*<span class="hljs-symbol">\[</span>([^<span class="hljs-symbol">\]</span>]*)<span class="hljs-symbol">\]</span>/,
+  nolink: /^!?<span class="hljs-symbol">\[</span>((?:<span class="hljs-symbol">\[</span>[^<span class="hljs-symbol">\]</span>]*<span class="hljs-symbol">\]</span>|[^<span class="hljs-symbol">\[</span><span class="hljs-symbol">\]</span>])*)<span class="hljs-symbol">\]</span>/,
+  reffn: /^!?<span class="hljs-symbol">\[</span><span class="hljs-symbol">\^</span>(inside)<span class="hljs-symbol">\]</span>/,
+  strong: /^__([<span class="hljs-symbol">\s</span><span class="hljs-symbol">\S</span>]+?)__(?!_)|^<span class="hljs-symbol">\*</span><span class="hljs-symbol">\*</span>([<span class="hljs-symbol">\s</span><span class="hljs-symbol">\S</span>]+?)<span class="hljs-symbol">\*</span><span class="hljs-symbol">\*</span>(?!<span class="hljs-symbol">\*</span>)/,
+  // em: /^<span class="hljs-symbol">\b</span>_((?:__|[<span class="hljs-symbol">\s</span><span class="hljs-symbol">\S</span>])+?)_<span class="hljs-symbol">\b</span>|^<span class="hljs-symbol">\*</span>((?:<span class="hljs-symbol">\*</span><span class="hljs-symbol">\*</span>|[<span class="hljs-symbol">\s</span><span class="hljs-symbol">\S</span>])+?)<span class="hljs-symbol">\*</span>(?!<span class="hljs-symbol">\*</span>)/,
+  em: /^<span class="hljs-symbol">\*</span>((?:<span class="hljs-symbol">\*</span><span class="hljs-symbol">\*</span>|[<span class="hljs-symbol">\s</span><span class="hljs-symbol">\S</span>])+?)<span class="hljs-symbol">\*</span>(?!<span class="hljs-symbol">\*</span>)/,
+  code: /^(`+)<span class="hljs-symbol">\s</span>*([<span class="hljs-symbol">\s</span><span class="hljs-symbol">\S</span>]*?[^`])<span class="hljs-symbol">\s</span>*<span class="hljs-symbol">\1</span>(?!`)/,
+  br: /^ &#123;2,&#125;<span class="hljs-symbol">\n</span>(?!<span class="hljs-symbol">\s</span>*$)/,
+  del: noop,
+  text: /^[<span class="hljs-symbol">\s</span><span class="hljs-symbol">\S</span>]+?(?=[<span class="hljs-symbol">\\</span>&lt;!<span class="hljs-symbol">\[</span>_*`$]| &#123;2,&#125;<span class="hljs-symbol">\n</span>|$)/,
+  math: /^<span class="hljs-symbol">\$</span><span class="hljs-symbol">\$</span><span class="hljs-symbol">\s</span>*([<span class="hljs-symbol">\s</span><span class="hljs-symbol">\S</span>]*?[^<span class="hljs-symbol">\$</span>])<span class="hljs-symbol">\s</span>*<span class="hljs-symbol">\$</span><span class="hljs-symbol">\$</span>(?!<span class="hljs-symbol">\$</span>)/,
+&#125;;</code></pre>
+<p>在主題中開啓 mathjax</p>
+<p>在 themes/xxx/_config.yml</p>
+<p>一般</p>
+<pre><code class="hljs undefined"><span class="hljs-attr">math:</span>
+  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span>
+  <span class="hljs-attr">per_page:</span> <span class="hljs-literal">true</span>
+  <span class="hljs-attr">engine:</span> <span class="hljs-string">mathjax</span></code></pre>
+<p>在需要渲染公式的文章的 Fornt-matter 中打開 mathjax</p>
+<pre><code class="hljs undefined"><span class="hljs-meta">---</span>
+<span class="hljs-attr">mathjax:</span> <span class="hljs-literal">true</span>
+<span class="hljs-string">--</span></code></pre>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/技術/">技術</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Web/">Web</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本著作係採用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">創用 CC 姓名標示-相同方式分享 4.0 國際 授權條款</a>授權. 轉載請註明出處</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2018/08/17/2018-08-17-Valentine-pw/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">一道情人節的密碼題</span>
+                        <span class="visible-mobile">前の記事</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;ディレクトリ</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">検索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">キーワード</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "基於 Hexo 搭建個人靜態部落格&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 55,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+  
+  
+    <script>
+      !function (e, t, a) {
+        function r() {
+          for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+          requestAnimationFrame(r)
+        }
+
+        function n() {
+          var t = "function" == typeof e.onclick && e.onclick;
+          e.onclick = function (e) {
+            t && t(), o(e)
+          }
+        }
+
+        function o(e) {
+          var a = t.createElement("div");
+          a.className = "heart", s.push({
+            el: a,
+            x: e.clientX - 5,
+            y: e.clientY - 5,
+            scale: 1,
+            alpha: 1,
+            color: c()
+          }), t.body.appendChild(a)
+        }
+
+        function i(e) {
+          var a = t.createElement("style");
+          a.type = "text/css";
+          try {
+            a.appendChild(t.createTextNode(e))
+          } catch (t) {
+            a.styleSheet.cssText = e
+          }
+          t.getElementsByTagName("head")[0].appendChild(a)
+        }
+
+        function c() {
+          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+        }
+
+        var s = [];
+        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+          setTimeout(e, 1e3 / 60)
+        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()
+      }(window, document);
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

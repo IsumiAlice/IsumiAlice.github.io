@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>死体的部落格</title>
+  <title>雀の涙</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-08-18T15:19:13.467Z</updated>
+  <updated>2020-08-23T05:36:11.416Z</updated>
   <id>/</id>
   
   <author>
-    <name>死体菌</name>
+    <name>死体</name>
     
   </author>
   
@@ -18,21 +18,14 @@
   
   <entry>
     <title>Arm PL 環境配置</title>
-    <link href="/2020/04/19/Arm-PL/"/>
-    <id>/2020/04/19/Arm-PL/</id>
+    <link href="/2020/04/19/2020-04-19-Arm-PL/"/>
+    <id>/2020/04/19/2020-04-19-Arm-PL/</id>
     <published>2020-04-19T13:51:50.000Z</published>
-    <updated>2020-08-18T15:19:13.467Z</updated>
+    <updated>2020-08-23T05:36:11.416Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;Arm Performance Libraries 作為 Linux 的 Arm Compiler 的一部分安裝，並且需要 Arm Allinea Studio 許可證&lt;/p&gt;
-&lt;h2 id=&quot;License&quot;&gt;&lt;a href=&quot;#License&quot;
-        
-      
+      &lt;p&gt;在 CentOS 下配置 Arm 高效能運算庫&lt;br&gt;
     
     </summary>
     
@@ -46,154 +39,42 @@
   </entry>
   
   <entry>
-    <title>使用 Windows 時經常遇到的問題</title>
-    <link href="/2020/03/10/Windows-puu/"/>
-    <id>/2020/03/10/Windows-puu/</id>
-    <published>2020-03-10T14:50:37.000Z</published>
-    <updated>2020-08-18T15:20:22.592Z</updated>
-    
-    <summary type="html">
-    
-      使用 Windows 時經常遇到的問題
-    
-    </summary>
-    
-      <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
-    
-    
-      <category term="計算機" scheme="/tags/%E8%A8%88%E7%AE%97%E6%A9%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Raspberry 配置 ASF</title>
-    <link href="/2020/03/04/Raspberry-ASF/"/>
-    <id>/2020/03/04/Raspberry-ASF/</id>
-    <published>2020-03-04T12:10:48.000Z</published>
-    <updated>2020-08-18T15:19:55.351Z</updated>
-    
-    <summary type="html">
-    
-      Raspberry 配置 ASF
-    
-    </summary>
-    
-      <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
-    
-    
-      <category term="樹莓派" scheme="/tags/%E6%A8%B9%E8%8E%93%E6%B4%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Raspberry 基礎配置</title>
-    <link href="/2020/02/29/Raspberry-hello/"/>
-    <id>/2020/02/29/Raspberry-hello/</id>
-    <published>2020-02-29T14:26:47.000Z</published>
-    <updated>2020-08-18T15:20:01.145Z</updated>
-    
-    <summary type="html">
-    
-      Raspberry 基礎配置
-    
-    </summary>
-    
-      <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
-    
-    
-      <category term="樹莓派" scheme="/tags/%E6%A8%B9%E8%8E%93%E6%B4%BE/"/>
-    
-      <category term="計算機" scheme="/tags/%E8%A8%88%E7%AE%97%E6%A9%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Steam 藝術作品展示欄設定</title>
-    <link href="/2020/01/27/Steam-bg/"/>
-    <id>/2020/01/27/Steam-bg/</id>
-    <published>2020-01-27T03:06:55.000Z</published>
-    <updated>2020-08-18T15:20:07.162Z</updated>
-    
-    <summary type="html">
-    
-      Steam 藝術作品展示欄設定
-    
-    </summary>
-    
-      <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
-    
-    
-      <category term="遊戲" scheme="/tags/%E9%81%8A%E6%88%B2/"/>
-    
-  </entry>
-  
-  <entry>
     <title>一道情人節的密碼題</title>
-    <link href="/2018/08/17/Valentine-pw/"/>
-    <id>/2018/08/17/Valentine-pw/</id>
+    <link href="/2018/08/17/2018-08-17-Valentine-pw/"/>
+    <id>/2018/08/17/2018-08-17-Valentine-pw/</id>
     <published>2018-08-17T11:18:12.000Z</published>
-    <updated>2020-08-18T15:20:13.643Z</updated>
+    <updated>2020-08-23T05:44:18.861Z</updated>
     
     <summary type="html">
     
-      今天是七夕呢，寫這個的起因是一個同學的女朋友發了個密碼解密給他。
+      &lt;p&gt;七夕快樂哦&lt;br&gt;
     
     </summary>
     
       <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
     
     
-  </entry>
-  
-  <entry>
-    <title>使用 youtube-dl 下載影片</title>
-    <link href="/2018/02/17/youtube-dl/"/>
-    <id>/2018/02/17/youtube-dl/</id>
-    <published>2018-02-17T01:34:04.000Z</published>
-    <updated>2020-08-18T15:20:26.636Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;youtube-dl常用命令&quot;&gt;&lt;a href=&quot;#youtube-dl常用命令&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
-    
-    
-      <category term="計算機" scheme="/tags/%E8%A8%88%E7%AE%97%E6%A9%9F/"/>
+      <category term="演算法" scheme="/tags/%E6%BC%94%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>基於 Hexo 搭建個人靜態部落格</title>
-    <link href="/2018/01/29/hello-hexo/"/>
-    <id>/2018/01/29/hello-hexo/</id>
+    <link href="/2018/01/29/2018-01-29-hello-hexo/"/>
+    <id>/2018/01/29/2018-01-29-hello-hexo/</id>
     <published>2018-01-29T03:00:18.000Z</published>
-    <updated>2020-08-18T15:18:45.828Z</updated>
+    <updated>2020-08-23T05:45:16.395Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;安裝&quot;&gt;&lt;a href=&quot;#安裝&quot; class=&quot;headerlink&quot; title=&quot;安裝&quot;&gt;&lt;/a&gt;安裝&lt;/h2&gt;&lt;p&gt;安裝&lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot;
-        
-      
+      &lt;p&gt;本站搭建過程（已過氣）&lt;br&gt;
     
     </summary>
     
       <category term="技術" scheme="/categories/%E6%8A%80%E8%A1%93/"/>
     
     
-      <category term="web" scheme="/tags/web/"/>
+      <category term="Web" scheme="/tags/Web/"/>
     
   </entry>
   
