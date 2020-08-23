@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 死体的部落格
+title: 雀の涙
 subtitle:
-description: 装作咸鱼的咸鱼
+description: 裝作鹹魚的鹹魚
 keywords:
-author: 死体菌
-language: zh-cn
+author: 死体
+language: ja
 timezone:
 
 # URL
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: diaspora
+theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

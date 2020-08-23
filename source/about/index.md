@@ -1,9 +1,13 @@
 ---
 title: about me
 date: 2020-6-16 23:27:43
-cover: https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204633.jpg
+layout: about
+# cover: https://gitee.com/IsumiAlice/IsumiPic/raw/master///20200515204633.jpg
 ---
 
+![]( https://gitee.com/IsumiAlice/IsumiPic/raw/master/2005/20200517134352.jpg)
+
+---
 
 社畜, 宅男, 站着尿尿神教教主
 
@@ -31,8 +35,9 @@ QQ：1261492496
 
 **2020-8-18**
 
-將原程式碼上傳到 source 分支
-由於大部分技術內容都放到 yuque 上了，這個部落格以後就發些胡言亂語吧
+將原程式碼上傳到 source 分支  
+由於大部分技術內容都放到 yuque 上了  
+所以這個部落格以後就發些作品截圖和胡言亂語
 
 **2020-6-17**
 
